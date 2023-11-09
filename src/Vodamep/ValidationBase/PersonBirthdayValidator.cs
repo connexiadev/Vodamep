@@ -9,6 +9,20 @@ namespace Vodamep.ValidationBase
     {
         public PersonBirthdayValidator(DateTime earliestBirthday, string clientOrStaff)
         {
+            #region Documentation
+            // AreaDef: AGP
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Hart
+
+            // CheckDef: Muss Feld
+            // Detail: Geburtsdatum
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Geburtsdatum, Remark: > 01.01.1900, nicht in der Zukunft
+
+            #endregion
+
             this.CascadeMode = CascadeMode.StopOnFirstFailure;
 
             this.RuleFor(x => x.BirthdayD).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(x.GetDisplayName()));

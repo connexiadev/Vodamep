@@ -12,6 +12,24 @@ namespace Vodamep.Agp.Validation
     {
         public StaffActivityValidator(AgpReport report)
         {
+
+            #region Documentation
+            // AreaDef: AGP
+            // OrderDef: 02
+            // SectionDef: Leistung
+            // StrengthDef: Hart
+
+            // CheckDef: Muss Feld
+            // Detail: Aktivitäts-Typ
+            // Detail: Datum
+            // Detail: Leistungszeit
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Aktivitäts-Typ, Ref: Aktivitäts-Typen-Liste, Url: src/Vodamep/Datasets/Agp/StaffActivityType.csv
+            // Detail: Datum, Remark: Innerhalb des Berichts-Zeitraums
+            // Detail: Leistungszeit, Remark: Größer 0, in 5 Minuten-Schritten
+            #endregion
+
             var displayNameResolver = new AgpDisplayNameResolver();
 
             this.RuleFor(x => x.Id).NotEmpty()
