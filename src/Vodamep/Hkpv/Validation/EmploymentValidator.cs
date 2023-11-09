@@ -12,6 +12,24 @@ namespace Vodamep.Hkpv.Validation
     {
         public EmploymentValidator(DateTime from, DateTime to, Staff s)
         {
+            #region Documentation
+            // AreaDef: HKP
+            // OrderDef: 03
+            // SectionDef: Anstellung
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: Start
+            // Fields: Ende
+            // Fields: Stunden
+
+            // CheckDef: Erlaubte Werte
+            // Fields: Start, Remark: Innerhalb des Meldungs-Zeitraums
+            // Fields: Ende, Remark: Innerhalb des Meldungs-Zeitraums
+            // Fields: Stunden, Remark: Max. 100 pro Woche, Group: Inhaltlich
+            #endregion
+
+
             this.RuleFor(x => x.From).NotEmpty();
             this.RuleFor(x => x.To).NotEmpty();
 

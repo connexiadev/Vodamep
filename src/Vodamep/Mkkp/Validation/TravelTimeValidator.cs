@@ -12,6 +12,17 @@ namespace Vodamep.Mkkp.Validation
     {
         private readonly MkkpReport report;
 
+        #region Documentation
+        // AreaDef: MKKP
+        // OrderDef: 04
+        // SectionDef: Fahrtzeit
+        // StrengthDef: Fehler
+
+        // CheckDef: Erlaubte Werte
+        // Fields: Zeit, Remark: > 0
+        #endregion
+
+
         public TravelTimeValidator(MkkpReport report)
         {
             MkkpDisplayNameResolver displayNameResolver = new MkkpDisplayNameResolver();

@@ -11,6 +11,14 @@ namespace Vodamep.Hkpv.Validation
         public ActivityWarningIfMoreThan5Validator()
             : base()
         {
+            #region Documentation
+            // AreaDef: HKP
+            // OrderDef: 04
+            // SectionDef: Leistung
+            // StrengthDef: Warnung
+            // Fields: Leistungen, Check: Gleiche Leistungen, Remark: Max. 5 x die gleiche Leistung pro Person und Tag, Group: Inhaltlich
+            #endregion
+
             RuleFor(x => x.Activities)
                 .Custom((list, ctx) =>
                 {

@@ -14,6 +14,22 @@ namespace Vodamep.StatLp.Validation
 
         public AttributeValidator(StatLpReport report)
         {
+            #region Documentation
+            // AreaDef: STAT
+            // OrderDef: 02
+            // SectionDef: Hauptmerkmal
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: Hauptmerkmalstyp, Remark: Angabe vom entsprechenden Hauptmerkmal
+            // Fields: Von
+
+            // CheckDef: Erlaubte Werte
+            // Fields: Hauptmerkmalstyp, Remark: Hauptmerkmale, Url: src/Vodamep/Datasets/StatLp/Attribute_type.csv
+            // Fields: Von, Remark: Innerhalb des Meldungszeitraums
+            // Fields: Von, Remark: Innerhalb eines Aufenthalts, Group: Inhaltlich
+            #endregion
+
             this.RuleFor(x => x.From).SetValidator(new TimestampWithOutTimeValidator());
 
             this.RuleFor(x => x.FromD).Must(x => x >= report.FromD && x <= report.ToD)

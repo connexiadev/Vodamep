@@ -27,6 +27,14 @@ namespace Vodamep.Hkpv.Validation
             this.RuleFor(x => new Tuple<IList<Staff>, IEnumerable<Activity>>(x.Staffs, x.Activities))
                .Custom((a, ctx) =>
                {
+                   #region Documentation
+                   // AreaDef: HKP
+                   // OrderDef: 04
+                   // SectionDef: Leistung
+                   // StrengthDef: Fehler
+                   // Fields: Leistungen, Check: Mitarbeiter, Remark: Alle Mitarbeiter müssen mind. 1 Leistung haben
+                   #endregion
+
                    var staffs = a.Item1;
                    var activities = a.Item2;                   
                    

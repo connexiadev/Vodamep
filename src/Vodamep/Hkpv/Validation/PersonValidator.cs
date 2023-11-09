@@ -13,6 +13,32 @@ namespace Vodamep.Hkpv.Validation
     {
         public PersonValidator()
         {
+            #region Documentation
+            // AreaDef: HKP
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: Nachname
+            // Fields: Vorname
+            // Fields: Versicherung
+            // Fields: Staatsbürgerschaft
+            // Fields: Pflegestufe
+            // Fields: PLZ/Ort
+            // Fields: Geschlecht, Remark: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
+
+            // CheckDef: Erlaubte Werte
+            // Fields: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Fields: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Fields: Versicherung, Remark: Versicherungs-Liste, Url: src/Vodamep/Datasets/InsuranceCode.csv
+            // Fields: Staatsbürgerschaft, Remark: Staatsbürgerschaften-Liste, Url: src/Vodamep/Datasets/CountryCode.csv
+            // Fields: Pflegestufen, Remark: Pflegestufen-Liste, Url:  src/Vodamep/Datasets/CareAllowance.csv
+            // Fields: PLZ/Ort, Remark: PLZ/Orte-Liste, Url: src/Vodamep/Datasets/PostcodeCity.csv
+            // Fields: Geschlecht, Remark: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
+
+            #endregion
+
             this.RuleFor(x => x.FamilyName).NotEmpty();
             this.RuleFor(x => x.GivenName).NotEmpty();
 

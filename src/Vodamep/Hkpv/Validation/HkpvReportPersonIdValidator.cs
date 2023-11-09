@@ -13,6 +13,14 @@ namespace Vodamep.Hkpv.Validation
     {
         public HkpvReportPersonIdValidator()
         {
+            #region Documentation
+            // AreaDef: HKP
+            // OrderDef: 04
+            // SectionDef: Leistung
+            // StrengthDef: Fehler
+            // Fields: Leistungen, Check: Personen, Remark: Alle Personen müssen mind. 1 Leistung haben
+            #endregion
+
             this.RuleFor(x => x).SetValidator(new UniqePersonIdValidator());
 
             //corert kann derzeit nicht mit AnonymousType umgehen. Vielleicht später: new { x.Persons, x.Activities }

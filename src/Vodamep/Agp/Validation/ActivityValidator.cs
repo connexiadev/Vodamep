@@ -12,6 +12,27 @@ namespace Vodamep.Agp.Validation
     {
         public ActivityValidator(AgpReport report)
         {
+            #region Documentation
+            // AreaDef: AGP
+            // OrderDef: 03
+            // SectionDef: Klienten-Leistung
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: Klient
+            // Fields: Leistungstyp
+            // Fields: Einsatzort
+            // Fields: Datum
+            // Fields: Leistungszeit
+
+            // CheckDef: Erlaubte Werte
+            // Fields: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Agp/ActivityType.csv
+            // Fields: Leistungstyp, Remark: Keine doppelten, gleichen Einträge
+            // Fields: Datum, Remark: Innerhalb des Meldungszeitraums
+            // Fields: Einsatzort, Remark: Einsatzort-Liste, Url: src/Vodamep/Datasets/Agp/PlaceOfAction.csv
+            // Fields: Datum, Remark: Innerhalb des Meldungs-Zeitraums
+            #endregion
+
             var displayNameResolver = new AgpDisplayNameResolver();
 
             this.RuleFor(x => x.PersonId).NotEmpty()

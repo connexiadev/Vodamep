@@ -11,6 +11,35 @@ namespace Vodamep.StatLp.Validation
 
         public LeavingValidator(StatLpReport report)
         {
+            #region Documentation
+            // AreaDef: STAT
+            // OrderDef: 05
+            // SectionDef: Abgang
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: Abgangsgrund
+            // Fields: Sterbefall, Remark: Wenn Abgangsgrund = verstorben
+            // Fields: Abgangsdatum, Remark: Abhängigkeit zum Aufenthalt
+            // Fields: Entlassung Wohin, Remark: Wenn Abgangsgrund = Entlassung
+            // Fields: Entlassung Wohin Sontige, Remark: Wenn Entlassung Wohin = Sonstige
+            // Fields: Entlassung Grund, Remark: Wenn Abgangsgrund = Entlassung
+            // Fields: Entlassung Grund Anderer, Remark: Wenn Entlassung Grund = Sonstiger
+
+            // CheckDef: Erlaubte Werte
+            // Fields: Abgangsgrund, Remark: Abgangs-Gründe, Url: src/Vodamep/Datasets/StatLp/LeavingReason.csv
+            // Fields: Abgangsdatum, Remark: Innerhalb des Meldungszeitraums
+            // Fields: Sterbefall, Remark: Sterbefallorte, Url: src/Vodamep/Datasets/StatLp/DeathLocation.csv
+            // Fields: Entlassung Wohin, Remark: Entlassungsorte, Url: src/Vodamep/Datasets/StatLp/DischargeLocation.csv
+            // Fields: Entlassung Grund, Remark: Entlassungsgrund, Url: src/Vodamep/Datasets/StatLp/DischargeReason.csv
+            // Fields: Entlassung Wohin, Remark: Nicht erlaubt, wenn verstorben
+            // Fields: Entlassung Wohin Sontige, Remark: Nicht erlaubt, wenn verstorben
+            // Fields: Entlassung Grund, Remark: Nicht erlaubt, wenn verstorben
+            // Fields: Entlassung Grund Anderer, Remark: Nicht erlaubt, wenn verstorben
+            // Fields: Entlassung Wohin Sontige, Remark: Buchstaben, Ziffern, div. Sonderzeichen, 30 Zeichen
+            // Fields: Entlassung Grund Anderer, Remark: Buchstaben, Ziffern, div. Sonderzeichen, 30 Zeichen
+            #endregion
+
             this.RuleFor(x => x.LeavingReason).NotEmpty().WithMessage(x => Validationmessages.StatLpLeavingReasonMustnotBeEmpty());
 
             this.RuleFor(x => x.DeathLocation).NotEmpty()

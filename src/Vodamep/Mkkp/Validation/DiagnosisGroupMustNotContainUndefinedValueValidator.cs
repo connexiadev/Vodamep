@@ -11,6 +11,16 @@ namespace Vodamep.Mkkp.Validation
     {
         public DiagnosisGroupMustNotContainUndefinedValueValidator()
         {
+            #region Documentation
+            // AreaDef: MKKP
+            // OrderDef: 03
+            // SectionDef: Klient
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: Diagnosegruppen
+            #endregion
+
             RuleFor(x => x)
                 .Custom((y, ctx) =>
                 {

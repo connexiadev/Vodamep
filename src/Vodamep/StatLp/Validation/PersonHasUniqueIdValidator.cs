@@ -10,6 +10,16 @@ namespace Vodamep.StatLp.Validation
     {
         public PersonHasUniqueIdValidator()
         {
+            #region Documentation
+            // AreaDef: STAT
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Fehler
+
+            // CheckDef: Eindeutigkeit
+            // Fields: Name/Geburtsdatum, Remark: Kein gleicher Name/Geburtstag, wenn nicht speziell deklariert, Group: Inhaltlich
+            #endregion
+
             this.RuleFor(x => new { x.Persons, x.Aliases })
                 .Custom((item, ctx) =>
                 {
