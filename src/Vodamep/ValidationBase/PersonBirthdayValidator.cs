@@ -21,6 +21,17 @@ namespace Vodamep.ValidationBase
             // CheckDef: Erlaubte Werte
             // Detail: Geburtsdatum, Remark: > 01.01.1900, nicht in der Zukunft
 
+            // AreaDef: CM
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Hart
+
+            // CheckDef: Muss Feld
+            // Detail: Geburtsdatum
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Geburtsdatum, Remark: > 01.01.1890, nicht in der Zukunft
+
             #endregion
 
             this.CascadeMode = CascadeMode.StopOnFirstFailure;

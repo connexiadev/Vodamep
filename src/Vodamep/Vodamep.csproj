@@ -47,7 +47,7 @@
 		<EmbeddedResource Include="Datasets\CareAllowanceArge.csv" />
 		<EmbeddedResource Include="Datasets\Cm\ActivityType.csv" />
 		<EmbeddedResource Include="Datasets\Cm\ClientActivityType.csv" />
-		<EmbeddedResource Include="Datasets\Gender.csv" />
+		<EmbeddedResource Include="Datasets\Genders.csv" />
 		<EmbeddedResource Include="Datasets\CountryCode.csv" />
 		<EmbeddedResource Include="Datasets\InsuranceCode.csv" />
 		<EmbeddedResource Include="Datasets\MainAttendanceCloseness.csv" />

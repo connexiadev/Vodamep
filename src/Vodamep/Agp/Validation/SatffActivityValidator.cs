@@ -20,12 +20,12 @@ namespace Vodamep.Agp.Validation
             // StrengthDef: Hart
 
             // CheckDef: Muss Feld
-            // Detail: Aktivitäts-Typ
+            // Detail: Leistungstyp
             // Detail: Datum
             // Detail: Leistungszeit
 
             // CheckDef: Erlaubte Werte
-            // Detail: Aktivitäts-Typ, Ref: Aktivitäts-Typen-Liste, Url: src/Vodamep/Datasets/Agp/StaffActivityType.csv
+            // Detail: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Agp/StaffActivityType.csv
             // Detail: Datum, Remark: Innerhalb des Berichts-Zeitraums
             // Detail: Leistungszeit, Remark: > 0, in 5-Minuten-Schritten
             #endregion

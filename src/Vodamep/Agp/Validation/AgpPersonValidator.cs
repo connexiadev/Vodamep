@@ -29,13 +29,13 @@ namespace Vodamep.Agp.Validation
             // Detail: Diagnosegruppen, Remark: Mindestens 1 Eintrag
 
             // CheckDef: Erlaubte Werte
-            // Detail: Geschlecht, Ref: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
-            // Detail: Pflegestufen, Ref: Pflegestufen-Liste, Url:  src/Vodamep/Datasets/CareAllowance.csv
-            // Detail: Zuweiser, Ref: Zuweiser-Liste, Url: src/Vodamep/Datasets/Agp/Referrer.csv
-            // Detail: PLZ/Ort, Ref: PLZ/Orte-Liste, Url: src/Vodamep/Datasets/PostcodeCity.csv
-            // Detail: Staatsbürgerschaft, Ref: Staatsbürgerschaften-Liste, Url: src/Vodamep/Datasets/CountryCode.csv
-            // Detail: Diagnosegruppen, Ref: Diagnosegruppen-Liste, Url: src/Vodamep/Datasets/Agp/Diagnosisgroup.csv
-            // Detail: Versicherung, Ref: Versicherungs-Liste, Url: src/Vodamep/Datasets/InsuranceCode.csv
+            // Detail: Geschlecht, Remark: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
+            // Detail: Pflegestufen, Remark: Pflegestufen-Liste, Url:  src/Vodamep/Datasets/CareAllowance.csv
+            // Detail: Zuweiser, Remark: Zuweiser-Liste, Url: src/Vodamep/Datasets/Agp/Referrer.csv
+            // Detail: PLZ/Ort, Remark: PLZ/Orte-Liste, Url: src/Vodamep/Datasets/PostcodeCity.csv
+            // Detail: Staatsbürgerschaft, Remark: Staatsbürgerschaften-Liste, Url: src/Vodamep/Datasets/CountryCode.csv
+            // Detail: Diagnosegruppen, Remark: Diagnosegruppen-Liste, Url: src/Vodamep/Datasets/Agp/Diagnosisgroup.csv
+            // Detail: Versicherung, Remark: Versicherungs-Liste, Url: src/Vodamep/Datasets/InsuranceCode.csv
             #endregion
 
             this.RuleFor(x => x.Gender).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(displayNameResolver.GetDisplayName(nameof(Person)), x.GetDisplayName()));
