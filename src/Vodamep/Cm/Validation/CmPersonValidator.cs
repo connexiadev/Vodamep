@@ -11,6 +11,25 @@ namespace Vodamep.Cm.Validation
     {
         public CmPersonValidator()
         {
+            #region Documentation
+            // AreaDef: CM
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: Geschlecht
+            // Fields: Pflegestufe
+            // Fields: PLZ/Ort
+            // Fields: Staatsbürgerschaft
+
+            // CheckDef: Erlaubte Werte
+            // Fields: Geschlecht, Remark: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
+            // Fields: Pflegestufen, Remark: Pflegestufen-Liste, Url:  src/Vodamep/Datasets/CareAllowance.csv
+            // Fields: PLZ/Ort, Remark: PLZ/Orte-Liste, Url: src/Vodamep/Datasets/PostcodeCity.csv
+            // Fields: Staatsbürgerschaft, Remark: Staatsbürgerschaften-Liste, Url: src/Vodamep/Datasets/CountryCode.csv
+            #endregion
+
             this.RuleFor(x => x.Gender).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(x.GetDisplayName()));
             this.RuleFor(x => x.CareAllowance).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(x.GetDisplayName()));
 

@@ -15,6 +15,14 @@ namespace Vodamep.Hkpv.Validation
         public ActivityMedicalByQualificationTraineeValidator()
             : base()
         {
+            #region Documentation
+            // AreaDef: HKP
+            // OrderDef: 04
+            // SectionDef: Leistung
+            // StrengthDef: Fehler
+            // Fields: Leistungen, Check: Auszubildende, Remark: Auszubildende dürfen keine med. Leistungen 6-10 durchführen., Group: Inhaltlich
+            #endregion
+
             //corert kann derzeit nicht mit AnonymousType umgehen. Vielleicht später:  new  { x.Activities, x.Staffs }
             this.RuleFor(x => new Tuple<IList<Activity>, IEnumerable<Staff>>(x.Activities, x.Staffs))
                 .Custom((a, ctx) =>
@@ -29,19 +37,19 @@ namespace Vodamep.Hkpv.Validation
                        .Where(x => trainees.Contains(x.StaffId))
                        .ToArray();
 
-                   foreach ( var entry in medical)
+                   foreach (var entry in medical)
                    {
                        var staff = staffs.Where(x => x.Id == entry.StaffId).First();
-                       
+
                        var msg = Validationmessages.TraineeMustNotContain06To10(staff);
-                       
+
                        var index = activities.IndexOf(entry);
                        ctx.AddFailure(new ValidationFailure($"{nameof(HkpvReport.Activities)}[{index}]", msg));
                    }
                });
         }
 
-        
+
 
     }
 }

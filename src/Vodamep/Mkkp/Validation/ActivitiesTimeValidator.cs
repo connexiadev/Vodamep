@@ -12,6 +12,15 @@ namespace Vodamep.Mkkp.Validation
     {
         public ActivitiesTimeValidator()
         {
+            #region Documentation
+            // AreaDef: MKKP
+            // OrderDef: 04
+            // SectionDef: Leistung
+            // StrengthDef: Fehler
+
+            // CheckDef: Erlaubte Werte
+            // Fields: Mitarbeiter/Leistungszeit, Remark: Max. 12 Std. Arbeitszeit pro Mitarbeiter/Tag, Group: Inhaltlich
+            #endregion
 
             // Max. 12 Std. pro Mitarbeiter pro Tag
 
@@ -49,6 +58,15 @@ namespace Vodamep.Mkkp.Validation
             });
 
 
+            #region Documentation
+            // AreaDef: MKKP
+            // OrderDef: 04
+            // SectionDef: Fahrtzeit
+            // StrengthDef: Fehler
+
+            // CheckDef: Erlaubte Werte
+            // Fields: Zeit/Mitarbeiter, Remark: Max. 12 Std. Fahrtzeit pro Mitarbeiter/Tag, Group: Inhaltlich
+            #endregion
 
             // Max. 12 Std. pro Mitarbeiter pro Tag Fahrzeit
 

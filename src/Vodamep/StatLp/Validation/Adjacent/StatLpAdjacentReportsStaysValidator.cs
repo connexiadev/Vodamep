@@ -23,6 +23,15 @@ namespace Vodamep.StatLp.Validation.Adjacent
             this.RuleFor(x => x).Custom(CheckStays);
         }
 
+        #region Documentation
+        // AreaDef: STAT
+        // OrderDef: 03
+        // SectionDef: Aufenthalt
+        // StrengthDef: Warnung
+        // LocationDef: Eingang
+        // Fields: Von/Bis/Aufnahmeart, Check: Aufenthalts-Zusammenhang, Remark: Gleiche Personen, mehrere Jahrespakete, Group: Inhaltlich
+        #endregion
+
         private void CheckStays((StatLpReport Predecessor, StatLpReport Report) data, CustomContext ctx)
         {
             // Personen mit Aufenthalten, die auch die nachfolgende Meldung betreffen

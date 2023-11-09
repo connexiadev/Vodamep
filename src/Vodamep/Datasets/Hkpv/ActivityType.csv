@@ -1,0 +1,20 @@
+﻿// Leistungstypen 
+LV01;Beratungsstunde
+LV02;Hausbesuch
+LV03;Hausbesuch mit besonderer Wegzeit
+LV04;Ganzheitliche Körperpflege / rehabilitative Pflege
+LV05;Teilpflege/Prophylaxen
+LV06;Patientenbeobachtung/Vitalzeichenkontrolle
+LV07;Wundversorgung
+LV08;Medikamentengabe/Injektionen,Infusionen
+LV09;Katheter setzen, Urinal anlegen,Einlauf,Spülungen
+LV10;Stoma-, Suprapub.-,Kath.-,Sonden- und Kanülenpflege/Absaugen
+LV11;Physikalische Maßnahmen/Lagerung/Mobilisation
+LV12;Betreuung Schwerkranker/Sterbender bei Tag
+LV13;Betreuung Schwerkranker bei Nacht/Sonn-/Feiertagen
+LV14;Begleitende Lebenshilfe/aktives Zuhören
+LV15;Abklären, Information und Vermittlung,Dokumentation
+LV16;Beraten, Anlernen und Begleiten
+LV17;Pflegebehelfe, Transporte
+LV31;Persönliche Beratung
+LV33;Telefonische Beratung

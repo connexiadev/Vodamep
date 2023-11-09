@@ -11,6 +11,15 @@ namespace Vodamep.Hkpv.Validation
     {
         public ActivityValidator4141617Without123(IEnumerable<Person> persons, IEnumerable<Staff> staffs)
         {
+            #region Documentation
+            // AreaDef: HKP
+            // OrderDef: 04
+            // SectionDef: Leistung
+            // StrengthDef: Fehler
+            // Fields: Leistungen, Check: Hausbesuch, Remark: Eine Leistung 4-14, 16-17 ohne Hausbesuch oder Beratung, Group: Inhaltlich
+            #endregion
+
+
             RuleFor(x => x.Entries)
                 .Custom((list, ctx) =>
                 {

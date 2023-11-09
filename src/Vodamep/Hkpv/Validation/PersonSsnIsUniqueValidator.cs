@@ -10,6 +10,19 @@ namespace Vodamep.Hkpv.Validation
     {
         public PersonSsnIsUniqueValidator()
         {
+            #region Documentation
+            // AreaDef: HKP
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: SVNR
+
+            // CheckDef: Erlaubte Werte
+            // Fields: SVNR, Remark: Eindeutig in der Meldung
+            #endregion
+
             RuleFor(x => x.Persons)
                 .Custom((list, ctx) =>
                 {

@@ -11,6 +11,16 @@ namespace Vodamep.StatLp.Validation
     {       
         public LeavingsValidator()
         {
+            #region Documentation
+            // AreaDef: STAT
+            // OrderDef: 05
+            // SectionDef: Abgang
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: Person
+            #endregion
+
 
             // Zu jedem Leaving muss es die Person geben
             this.RuleFor(x => new { x.Persons, x.Leavings })

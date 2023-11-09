@@ -20,6 +20,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Datasets\Hkpv\ActivityType.csv" />
 	  <None Remove="Datasets\Hkpv\Gender.csv" />
 	  <None Remove="Datasets\MainAttendanceRelation.csv" />
 	</ItemGroup>
@@ -35,6 +36,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<EmbeddedResource Include="Datasets\Hkpv\ActivityType.csv" />
 		<EmbeddedResource Include="Datasets\Hkpv\Gender.csv" />
 		<EmbeddedResource Include="Datasets\MainAttendanceRelation.csv" />
 		<EmbeddedResource Include="Datasets\StatLp\AdmissionLocation.csv" />
@@ -47,7 +49,7 @@
 		<EmbeddedResource Include="Datasets\CareAllowanceArge.csv" />
 		<EmbeddedResource Include="Datasets\Cm\ActivityType.csv" />
 		<EmbeddedResource Include="Datasets\Cm\ClientActivityType.csv" />
-		<EmbeddedResource Include="Datasets\Gender.csv" />
+		<EmbeddedResource Include="Datasets\Genders.csv" />
 		<EmbeddedResource Include="Datasets\CountryCode.csv" />
 		<EmbeddedResource Include="Datasets\InsuranceCode.csv" />
 		<EmbeddedResource Include="Datasets\MainAttendanceCloseness.csv" />
@@ -59,7 +61,7 @@
 		<EmbeddedResource Include="Datasets\PostcodeCity.csv" />
 		<EmbeddedResource Include="Datasets\QualificationCode.csv" />
 		<EmbeddedResource Include="Datasets\StatLp\AdmissionType.csv" />
-		<EmbeddedResource Include="Datasets\StatLp\attribute_type.csv" />
+		<EmbeddedResource Include="Datasets\StatLp\Attribute_type.csv" />
 		<EmbeddedResource Include="Datasets\StatLp\DeathLocation.csv" />
 		<EmbeddedResource Include="Datasets\StatLp\DischargeLocation.csv" />
 		<EmbeddedResource Include="Datasets\StatLp\DischargeReason.csv" />

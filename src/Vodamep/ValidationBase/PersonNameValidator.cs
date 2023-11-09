@@ -8,6 +8,79 @@ namespace Vodamep.ValidationBase
     {
         public PersonNameValidator(string localizedPerson, string nameRegex, int minLengthGivenName, int maxLengthGivenName, int minLengthFamilyName, int maxLengthFamilyName)
         {
+            #region Documentation
+            // AreaDef: AGP
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: Nachname
+            // Fields: Vorname
+
+            // CheckDef: Erlaubte Werte
+            // Fields: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Fields: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+
+
+            // AreaDef: MKKP
+            // OrderDef: 01
+            // SectionDef: Klient
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: Nachname
+            // Fields: Vorname
+
+            // CheckDef: Erlaubte Werte
+            // Fields: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Fields: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+
+
+
+            // AreaDef: CM
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: Nachname
+            // Fields: Vorname
+
+            // CheckDef: Erlaubte Werte
+            // Fields: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen
+            // Fields: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen
+
+
+            // AreaDef: MOHI
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: Nachname
+            // Fields: Vorname
+
+            // CheckDef: Erlaubte Werte
+            // Fields: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen
+            // Fields: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen
+
+
+            // AreaDef: TB
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: Nachname
+            // Fields: Vorname
+
+            // CheckDef: Erlaubte Werte
+            // Fields: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen
+            // Fields: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen
+
+            #endregion
+
             this.RuleFor(x => x.FamilyName).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(x.GetDisplayName()));
             this.RuleFor(x => x.GivenName).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(x.GetDisplayName()));
 

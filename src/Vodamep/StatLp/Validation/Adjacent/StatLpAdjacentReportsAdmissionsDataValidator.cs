@@ -33,6 +33,15 @@ namespace Vodamep.StatLp.Validation.Adjacent
             });
         }
 
+        #region Documentation
+        // AreaDef: STAT
+        // OrderDef: 01
+        // SectionDef: Person
+        // StrengthDef: Warnung
+        // LocationDef: Eingang
+        // Fields: Geschlecht, Check: Gleiches Geschlecht, Remark: Über mehrere Jahrespakete, Group: Inhaltlich
+        #endregion
+
         private void CheckGenders((StatLpReport Predecessor, StatLpReport Report) data, CustomContext ctx, string[] personIds)
         {
             var curValues = data.Report.Admissions

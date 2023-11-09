@@ -9,6 +9,21 @@ namespace Vodamep.StatLp.Validation
     {
         public PersonBirthdayValidator()
         {
+            #region Documentation
+            // AreaDef: STAT
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: Geburtsdatum
+
+            // CheckDef: Erlaubte Werte
+            // Fields: Geburtsdatum, Remark: > 01.01.1890, nicht in der Zukunft
+
+            #endregion
+
+            // StrengthDef: Fehler
             this.CascadeMode = CascadeMode.StopOnFirstFailure;
 
             RuleFor(x => x.Birthday)

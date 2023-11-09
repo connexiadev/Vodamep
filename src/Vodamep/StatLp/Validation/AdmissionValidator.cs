@@ -21,6 +21,47 @@ namespace Vodamep.StatLp.Validation
 
         public AdmissionValidator(StatLpReport report)
         {
+            #region Documentation
+            // AreaDef: STAT
+            // OrderDef: 04
+            // SectionDef: Aufnahme
+            // StrengthDef: Fehler
+
+            // CheckDef: Pflichtfeld
+            // Fields: Aufnahmedatum, Remark: Abhängigkeit zum Aufenthalt
+            // Fields: Geschlecht
+            // Fields: Staatsbürgerschaft
+            // Fields: Letzer Wohnort
+            // Fields: Wohnsituation
+            // Fields: Wohnsituation Andere, Remark: Nur, wenn Wohnsituation = Sonstige
+            // Fields: Verwandtschaftsverhältnis
+            // Fields: Räumliche Nähe
+            // Fields: Wohnraumsituation, Remark: Ab 2011
+            // Fields: Wohnraumsituation
+            // Fields: Wohnraumsituation Andere, Remark: Nur, wenn Wohnraumsituation = Andere
+            // Fields: Persönliche Situation
+            // Fields: Persönliche Situation Andere, Remark: Nur, wenn Persönliche Situation = Andere
+            // Fields: Soziale Änderung
+            // Fields: Soziale Änderung Andere, Remark: Nur, wenn Soziale Änderung = Andere
+
+            // CheckDef: Erlaubte Werte
+            // Fields: Geschlecht, Remark: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
+            // Fields: Staatsbürgerschaft, Remark: Staatsbürgerschaften-Liste, Url: src/Vodamep/Datasets/CountryCode.csv
+            // Fields: Letzer Wohnort, Remark: Ab 2019 PLZ/Orte-Liste, Url: src/Vodamep/Datasets/PostcodeCity.csv
+            // Fields: Wohnsituation, Remark: Wohnsituationen, Url: src/Vodamep/Datasets/StatLp/AdmissionLocation.csv
+            // Fields: Verwandtschaftsverhältnis, Remark: Verwandtschaftsverhältnisse, Url: src/Vodamep/Datasets/MainAttendanceRelation.csv
+            // Fields: Räumliche Nähe, Remark: Räumliche-Nähen-Liste, Url: src/Vodamep/Datasets/MainAttendanceCloseness.csv
+            // Fields: Wohnraumsituation, Remark: Wohnraumsituationen, Url: src/Vodamep/Datasets/StatLp/HousingReason.csv
+            // Fields: Persönliche Situation, Remark: Persönliche-Situation-Liste, Url: src/Vodamep/Datasets/StatLp/PersonalChange.csv
+            // Fields: Soziale Änderung, Remark: Soziale-Änderungen-Liste, Url: src/Vodamep/Datasets/StatLp/SocialChange.csv
+            // Fields: Anderer Dienste, Remark: Dienste, Url: src/Vodamep/Datasets/StatLp/Service.csv
+            // Fields: Wohnraumsituation Andere, Remark: Buchstaben, Ziffern, div. Sonderzeichen, 100 Zeichen
+            // Fields: Persönliche Situation Andere, Remark: Buchstaben, Ziffern, div. Sonderzeichen, 100 Zeichen
+            // Fields: Soziale Änderung Andere, Remark: Buchstaben, Ziffern, div. Sonderzeichen, 100 Zeichen
+
+            #endregion
+
+
             this.RuleFor(x => x.AdmissionDate).NotEmpty();
 
             this.RuleFor(x => x.Gender).NotEmpty();
