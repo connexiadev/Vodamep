@@ -28,7 +28,7 @@ namespace Vodamep.Agp.Validation
             // Detail: Aktivitäts-Typ, Ref: Aktivitäts-Typen-Liste, Url: src/Vodamep/Datasets/Agp/ActivityType.csv
             // Detail: Einsatzort, Ref: Einsatzort-Liste, Url: src/Vodamep/Datasets/Agp/PlaceOfAction.csv
             // Detail: Datum, Remark: Innerhalb des Berichts-Zeitraums
-            // Detail: Leistungszeit, Remark: Größer 0, in 5 Minuten-Schritten
+            // Detail: Leistungszeit, Remark: > 0, in 5-Minuten-Schritten
             #endregion
 
             var displayNameResolver = new AgpDisplayNameResolver();
