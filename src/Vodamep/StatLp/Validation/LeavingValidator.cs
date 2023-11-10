@@ -11,6 +11,29 @@ namespace Vodamep.StatLp.Validation
 
         public LeavingValidator(StatLpReport report)
         {
+            #region Documentation
+            // AreaDef: STAT
+            // OrderDef: 05
+            // SectionDef: Abgang
+            // StrengthDef: Hart
+
+            // CheckDef: Muss Feld
+            // Detail: Abgangsgrund
+            // Detail: Sterbefall, Remark: Wenn Abgangsgrund = verstorben
+            // Detail: Abgangsdatum
+            // Detail: Entlassung Wohin, Remark: Wenn Abgangsgrund = Entlassung
+            // Detail: Entlassung Wohin Sontige, Remark: Wenn Entlassung Wohin = Sonstige
+            // Detail: Entlassung Grund, Remark: Wenn Abgangsgrund = Entlassung
+            // Detail: Entlassung Grund Anderer, Remark: Wenn Entlassung Grund = Sonstiger
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Abgangsgrund, Remark: Abgangs-Gründe, Url: src/Vodamep/Datasets/StatLp/LeavingReason.csv
+            // Detail: Abgangsdatum, Remark: Innerhalb des Meldungszeitraums
+            // Detail: Sterbefall, Remark: Sterbefall-Liste, Url: src/Vodamep/Datasets/StatLp/DeathLocation.csv
+            // Detail: Entlassung Wohin, Remark: Entlassungs-Liste, Url: src/Vodamep/Datasets/StatLp/DischargeLocation.csv
+            // Detail: Entlassung Grund, Remark: Entlassungs-Liste, Url: src/Vodamep/Datasets/StatLp/DischargeReason.csv
+            #endregion
+
             this.RuleFor(x => x.LeavingReason).NotEmpty().WithMessage(x => Validationmessages.StatLpLeavingReasonMustnotBeEmpty());
 
             this.RuleFor(x => x.DeathLocation).NotEmpty()

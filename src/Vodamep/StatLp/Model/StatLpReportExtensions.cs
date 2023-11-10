@@ -49,6 +49,21 @@ namespace Vodamep.StatLp.Model
 
         public static IEnumerable<GroupedStay> GetGroupedStays(this Stay[] stays, GroupedStay.SameTypeGroupMode sameTypeGroupMode = GroupedStay.SameTypeGroupMode.NotAllowed)
         {
+
+            #region Documentation
+            // AreaDef: STAT
+            // OrderDef: 03
+            // SectionDef: Aufenthalt
+            // StrengthDef: Hart
+
+            // CheckDef: Überschneidungen
+            // Detail: Von/Bis/Aufnahmeart, Remark: Keine Überscheidungen bei mehreren Aufenthalten, Group: Inhaltlich
+
+            // CheckDef: Aufeninanderfolgende
+            // Detail: Von/Bis/Aufnahmeart, Remark: Unterschiedliche Aufnahmeart für aufeinanderf. Aufenthalte, Group: Inhaltlich
+            #endregion
+
+
             if (stays.Length == 0)
                 yield break;
 

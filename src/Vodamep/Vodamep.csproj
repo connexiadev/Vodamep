@@ -61,7 +61,7 @@
 		<EmbeddedResource Include="Datasets\PostcodeCity.csv" />
 		<EmbeddedResource Include="Datasets\QualificationCode.csv" />
 		<EmbeddedResource Include="Datasets\StatLp\AdmissionType.csv" />
-		<EmbeddedResource Include="Datasets\StatLp\attribute_type.csv" />
+		<EmbeddedResource Include="Datasets\StatLp\_attribute_type.csv" />
 		<EmbeddedResource Include="Datasets\StatLp\DeathLocation.csv" />
 		<EmbeddedResource Include="Datasets\StatLp\DischargeLocation.csv" />
 		<EmbeddedResource Include="Datasets\StatLp\DischargeReason.csv" />

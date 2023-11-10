@@ -9,6 +9,21 @@ namespace Vodamep.StatLp.Validation
     {
         public PersonValidator()
         {
+            #region Documentation
+            // AreaDef: STAT
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Hart
+
+            // CheckDef: Muss Feld
+            // Detail: Nachname
+            // Detail: Vorname
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Nachname, Remark: 2-50 Zeichen, Buchstaben, Bindestrich, Leerzeichen
+            // Detail: Vorname, Remark: 2-30 Zeichen, Buchstaben, Bindestrich, Leerzeichen
+            #endregion
+
             this.RuleFor(x => x.FamilyName).NotEmpty();
             this.RuleFor(x => x.GivenName).NotEmpty();
 

@@ -14,6 +14,17 @@ namespace Vodamep.StatLp.Validation
 
         public AttributesValidator()
         {
+            #region Documentation
+            // AreaDef: STAT
+            // OrderDef: 02
+            // SectionDef: Hauptmerkmal
+            // StrengthDef: Hart
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Finanzierung/Pflegestufen, Remark: Keine Duplikate bei Person/Datum/Finanzierung/Pflegestufen
+
+            #endregion
+
 
             // Zu jedem Attribut muss es die Person geben
             this.RuleFor(x => new { x.Persons, x.Attributes })

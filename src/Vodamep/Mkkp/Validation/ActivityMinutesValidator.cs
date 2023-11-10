@@ -15,7 +15,7 @@ namespace Vodamep.Mkkp.Validation
             // SectionDef: Leistung
             // StrengthDef: Hart
 
-            // CheckDef: Erlaubte Werte, Group: Inhaltlich
+            // CheckDef: Erlaubte Werte
             // Detail: Leistungszeit, Remark: > 0, in 5-Minuten-Schritten
             #endregion
 

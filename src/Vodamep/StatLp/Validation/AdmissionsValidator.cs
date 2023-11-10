@@ -11,6 +11,17 @@ namespace Vodamep.StatLp.Validation
     {       
         public AdmissionsValidator()
         {
+            #region Documentation
+            // AreaDef: STAT
+            // OrderDef: 04
+            // SectionDef: Aufnahme
+            // StrengthDef: Hart
+
+            // CheckDef: Muss Feld
+            // Detail: Person
+            #endregion
+
+
             // Zu jeder Admission muss es die Person geben
             this.RuleFor(x => new { x.Persons, x.Admissions })
                 .Custom((data, ctx) =>

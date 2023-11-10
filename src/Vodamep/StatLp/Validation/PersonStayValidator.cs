@@ -13,6 +13,17 @@ namespace Vodamep.StatLp.Validation
         private static readonly DisplayNameResolver DisplayNameResolver = new DisplayNameResolver();
         public PersonStayValidator()
         {
+            #region Documentation
+            // AreaDef: STAT
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Hart
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Aufenthalt, Remark: Nur Personen mit gültigem Aufenthalt, Group: Inhaltlich
+            #endregion
+
+
             // Zu jeder Person muss es mindestens einen Aufenthalt geben
             this.RuleFor(x => new { x.Persons, x.Stays })
                 .Custom((a, ctx) =>
@@ -101,7 +112,18 @@ namespace Vodamep.StatLp.Validation
                         }
                     }
                 });
-        }      
+        }
+
+
+        #region Documentation
+        // AreaDef: STAT
+        // OrderDef: 03
+        // SectionDef: Aufenthalt
+        // StrengthDef: Hart
+
+        // CheckDef: Angaben bei Aufnahme
+        // Detail: Hauptmerkmale, Remark: Meldung der 3 Hauptmerkmale bei Aufnahme, Group: Inhaltlich
+        #endregion
 
         private void AttributeValidation(CustomContext ctx, StatLpReport report, GroupedStay s)
         {
@@ -131,6 +153,18 @@ namespace Vodamep.StatLp.Validation
 
 
         }
+
+        #region Documentation
+        // AreaDef: STAT
+        // OrderDef: 03
+        // SectionDef: Aufenthalt
+        // StrengthDef: Hart
+
+        // CheckDef: Aufenthaltswechsel
+        // Detail: Aufenthaltsart, Remark: Daueraufnahme auf Urlaubspflege nicht erlaubt, Group: Inhaltlich
+        // Detail: Aufenthaltsart, Remark: Daueraufnahme auf Übergangspflege nicht erlaubt, Group: Inhaltlich
+        #endregion
+
         private void AdmissionTypeChangeValidation(CustomContext ctx, StatLpReport report, GroupedStay s, AdmissionType from, AdmissionType to)
         {
             for (var i = 1; i < s.Stays.Length; i++)
@@ -142,6 +176,19 @@ namespace Vodamep.StatLp.Validation
                 }
             }
         }
+
+        #region Documentation
+        // AreaDef: STAT
+        // OrderDef: 03
+        // SectionDef: Aufenthalt
+        // StrengthDef: Hart
+
+        // CheckDef: Aufenthaltsdauer Urlaub
+        // Detail: Von/Bis/Aufnahmeart, Remark: Urlaub von der Pflege, 42 Tage, Group: Inhaltlich
+
+        // CheckDef: Aufenthaltsdauer Übergang
+        // Detail: Von/Bis/Aufnahmeart, Remark: Übergangspflege, 365 Tage, Group: Inhaltlich
+        #endregion
 
 
         private void StayLengthValidation(CustomContext ctx, StatLpReport report, GroupedStay s, AdmissionType admissionType, int days)
@@ -160,6 +207,17 @@ namespace Vodamep.StatLp.Validation
                 });
             }
         }
+
+
+        #region Documentation
+        // AreaDef: STAT
+        // OrderDef: 04
+        // SectionDef: Aufenthalt
+        // StrengthDef: Hart
+
+        // CheckDef: Angaben bei Aufnahme
+        // Detail: Aufnahmedaten, Remark: Eine Meldung der Aufnahmedaten bei Aufenthaltsstart, Group: Inhaltlich
+        #endregion
 
         private void AdmissionValidation(CustomContext ctx, StatLpReport report, Person person, GroupedStay s)
         {
@@ -192,6 +250,17 @@ namespace Vodamep.StatLp.Validation
                     Validationmessages.StatLpMultipleAdmission(report.GetPersonName(person.Id), s.From.ToShortDateString())));
             }
         }
+
+
+        #region Documentation
+        // AreaDef: STAT
+        // OrderDef: 04
+        // SectionDef: Aufenthalt
+        // StrengthDef: Hart
+
+        // CheckDef: Angaben bei Abgang
+        // Detail: Abgangsdaten, Remark: Eine Meldung der Abgangsdaten bei Aufenthaltsende, Group: Inhaltlich
+        #endregion
 
         private void LeavingValidation(CustomContext ctx, StatLpReport report, Person person, GroupedStay s)
         {
