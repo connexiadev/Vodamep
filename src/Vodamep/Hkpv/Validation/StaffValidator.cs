@@ -20,7 +20,7 @@ namespace Vodamep.Hkpv.Validation
             // SectionDef: Mitarbeiter
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Nachname
             // Fields: Vorname
             // Fields: Qualifizierung, Remark: Ab 2019

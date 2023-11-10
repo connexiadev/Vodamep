@@ -18,7 +18,7 @@ namespace Vodamep.Agp.Validation
             // SectionDef: Klienten-Leistung
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Klient
             // Fields: Leistungstyp
             // Fields: Einsatzort

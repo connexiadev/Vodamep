@@ -19,7 +19,7 @@ namespace Vodamep.Mkkp.Validation
             // SectionDef: Leistung
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Klient
             // Fields: Mitarbeiter
             // Fields: Einsatzort

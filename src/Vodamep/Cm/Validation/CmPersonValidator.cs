@@ -17,7 +17,7 @@ namespace Vodamep.Cm.Validation
             // SectionDef: Person
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Geschlecht
             // Fields: Pflegestufe
             // Fields: PLZ/Ort

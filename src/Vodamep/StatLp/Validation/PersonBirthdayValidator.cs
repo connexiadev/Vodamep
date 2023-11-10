@@ -15,7 +15,7 @@ namespace Vodamep.StatLp.Validation
             // SectionDef: Person
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Geburtsdatum
 
             // CheckDef: Erlaubte Werte

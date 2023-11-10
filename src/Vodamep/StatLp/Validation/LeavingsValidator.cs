@@ -17,7 +17,7 @@ namespace Vodamep.StatLp.Validation
             // SectionDef: Abgang
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Person
             #endregion
 

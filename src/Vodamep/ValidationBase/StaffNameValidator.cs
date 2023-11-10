@@ -15,7 +15,7 @@ namespace Vodamep.ValidationBase
             // SectionDef: Mitarbeiter
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Nachname
             // Fields: Vorname
 

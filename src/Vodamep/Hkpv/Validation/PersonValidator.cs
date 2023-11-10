@@ -19,7 +19,7 @@ namespace Vodamep.Hkpv.Validation
             // SectionDef: Person
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Nachname
             // Fields: Vorname
             // Fields: Versicherung

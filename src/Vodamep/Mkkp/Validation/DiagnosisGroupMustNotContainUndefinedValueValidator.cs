@@ -17,7 +17,7 @@ namespace Vodamep.Mkkp.Validation
             // SectionDef: Klient
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Diagnosegruppen
             #endregion
 

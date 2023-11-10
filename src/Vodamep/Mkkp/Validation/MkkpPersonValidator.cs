@@ -18,7 +18,7 @@ namespace Vodamep.Mkkp.Validation
             // SectionDef: Klient
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Geburtsdatum
             // Fields: Zuweiser
             // Fields: Sonstiger Zuweiser, Remark: Wenn Zuweiser = Sonstiger

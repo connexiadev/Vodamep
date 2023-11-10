@@ -16,17 +16,17 @@ namespace Vodamep.StatLp.Validation
         {
             #region Documentation
             // AreaDef: STAT
-            // OrderDef: 01
+            // OrderDef: 02
             // SectionDef: Hauptmerkmal
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Hauptmerkmalstyp, Remark: Angabe vom entsprechenden Hauptmerkmal
             // Fields: Von
 
             // CheckDef: Erlaubte Werte
             // Fields: Hauptmerkmalstyp, Remark: Hauptmerkmale, Url: src/Vodamep/Datasets/StatLp/Attribute_type.csv
-            // Fields: Von, Remark: Innerhalb des Meldungszeitraums, Group: Inhaltlich
+            // Fields: Von, Remark: Innerhalb des Meldungszeitraums
             // Fields: Von, Remark: Innerhalb eines Aufenthalts, Group: Inhaltlich
             #endregion
 

@@ -18,7 +18,7 @@ namespace Vodamep.Hkpv.Validation
             // SectionDef: Anstellung
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Start
             // Fields: Ende
             // Fields: Stunden

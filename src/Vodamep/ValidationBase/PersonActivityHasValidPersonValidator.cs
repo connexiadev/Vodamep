@@ -15,7 +15,7 @@ namespace Vodamep.ValidationBase
             // SectionDef: Leistung
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Person
             #endregion
 
@@ -25,7 +25,7 @@ namespace Vodamep.ValidationBase
             // SectionDef: Leistung
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Person
             #endregion
 

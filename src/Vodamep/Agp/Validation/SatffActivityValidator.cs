@@ -19,7 +19,7 @@ namespace Vodamep.Agp.Validation
             // SectionDef: Leistung
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Leistungstyp
             // Fields: Datum
             // Fields: Leistungszeit

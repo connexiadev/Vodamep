@@ -19,7 +19,7 @@ namespace Vodamep.Agp.Validation
             // SectionDef: Person
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Geschlecht
             // Fields: Pflegestufe
             // Fields: Zuweiser

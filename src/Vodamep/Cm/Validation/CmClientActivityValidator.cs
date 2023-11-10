@@ -16,7 +16,7 @@ namespace Vodamep.Cm.Validation
             // SectionDef: Klienten-Leistung
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Leistungstyp
             // Fields: Datum
             // Fields: Leistungszeit

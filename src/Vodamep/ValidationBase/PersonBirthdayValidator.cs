@@ -15,7 +15,7 @@ namespace Vodamep.ValidationBase
             // SectionDef: Person
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Geburtsdatum
 
             // CheckDef: Erlaubte Werte
@@ -26,7 +26,7 @@ namespace Vodamep.ValidationBase
             // SectionDef: Person
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Geburtsdatum
 
             // CheckDef: Erlaubte Werte
@@ -38,7 +38,7 @@ namespace Vodamep.ValidationBase
             // SectionDef: Person
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Geburtsdatum
 
             // CheckDef: Erlaubte Werte
@@ -51,7 +51,7 @@ namespace Vodamep.ValidationBase
             // SectionDef: Person
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Geburtsdatum
 
             // CheckDef: Erlaubte Werte

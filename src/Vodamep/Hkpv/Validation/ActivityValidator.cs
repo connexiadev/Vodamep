@@ -17,7 +17,7 @@ namespace Vodamep.Hkpv.Validation
             // SectionDef: Leistung
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Datum
             // Fields: Mitarbeiter
             // Fields: Klient

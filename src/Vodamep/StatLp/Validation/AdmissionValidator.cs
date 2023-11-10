@@ -27,7 +27,7 @@ namespace Vodamep.StatLp.Validation
             // SectionDef: Aufnahme
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Aufnahmedatum, Remark: Abhängigkeit zum Aufenthalt
             // Fields: Geschlecht
             // Fields: Staatsbürgerschaft

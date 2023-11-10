@@ -17,7 +17,7 @@ namespace Vodamep.StatLp.Validation
             // SectionDef: Abgang
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Abgangsgrund
             // Fields: Sterbefall, Remark: Wenn Abgangsgrund = verstorben
             // Fields: Abgangsdatum, Remark: Abhängigkeit zum Aufenthalt

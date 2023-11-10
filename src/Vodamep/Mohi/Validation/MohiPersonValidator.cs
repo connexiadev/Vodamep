@@ -17,7 +17,7 @@ namespace Vodamep.Mohi.Validation
             // SectionDef: Person
             // StrengthDef: Fehler
 
-            // CheckDef: Muss Feld
+            // CheckDef: Pflichtfeld
             // Fields: Geschlecht
             // Fields: PLZ/Ort
             // Fields: Pflegestufe

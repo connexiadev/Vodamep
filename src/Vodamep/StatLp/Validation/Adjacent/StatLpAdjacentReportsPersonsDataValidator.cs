@@ -33,6 +33,15 @@ namespace Vodamep.StatLp.Validation.Adjacent
             });
         }
 
+
+        #region Documentation
+        // AreaDef: STAT
+        // OrderDef: 01
+        // SectionDef: Person
+        // StrengthDef: Warnung
+        // LocationDef: Eingang
+        // Fields: Geburtdatum, Check: Änderung Geburtsdatum, Remark: Gleiche Personen-ID, mehrere Jahrespakete, Group: Inhaltlich
+        #endregion
         private void CheckBirthday((StatLpReport Predecessor, StatLpReport Report) data, CustomContext ctx, string[] personIds)
         {
             var curValues = data.Report.Persons
