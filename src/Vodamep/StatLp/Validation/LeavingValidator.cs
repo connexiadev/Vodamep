@@ -15,23 +15,29 @@ namespace Vodamep.StatLp.Validation
             // AreaDef: STAT
             // OrderDef: 05
             // SectionDef: Abgang
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Abgangsgrund
-            // Detail: Sterbefall, Remark: Wenn Abgangsgrund = verstorben
-            // Detail: Abgangsdatum
-            // Detail: Entlassung Wohin, Remark: Wenn Abgangsgrund = Entlassung
-            // Detail: Entlassung Wohin Sontige, Remark: Wenn Entlassung Wohin = Sonstige
-            // Detail: Entlassung Grund, Remark: Wenn Abgangsgrund = Entlassung
-            // Detail: Entlassung Grund Anderer, Remark: Wenn Entlassung Grund = Sonstiger
+            // Fields: Abgangsgrund
+            // Fields: Sterbefall, Remark: Wenn Abgangsgrund = verstorben
+            // Fields: Abgangsdatum, Remark: Abhängigkeit zum Aufenthalt
+            // Fields: Entlassung Wohin, Remark: Wenn Abgangsgrund = Entlassung
+            // Fields: Entlassung Wohin Sontige, Remark: Wenn Entlassung Wohin = Sonstige
+            // Fields: Entlassung Grund, Remark: Wenn Abgangsgrund = Entlassung
+            // Fields: Entlassung Grund Anderer, Remark: Wenn Entlassung Grund = Sonstiger
 
             // CheckDef: Erlaubte Werte
-            // Detail: Abgangsgrund, Remark: Abgangs-Gründe, Url: src/Vodamep/Datasets/StatLp/LeavingReason.csv
-            // Detail: Abgangsdatum, Remark: Innerhalb des Meldungszeitraums
-            // Detail: Sterbefall, Remark: Sterbefall-Liste, Url: src/Vodamep/Datasets/StatLp/DeathLocation.csv
-            // Detail: Entlassung Wohin, Remark: Entlassungs-Liste, Url: src/Vodamep/Datasets/StatLp/DischargeLocation.csv
-            // Detail: Entlassung Grund, Remark: Entlassungs-Liste, Url: src/Vodamep/Datasets/StatLp/DischargeReason.csv
+            // Fields: Abgangsgrund, Remark: Abgangs-Gründe, Url: src/Vodamep/Datasets/StatLp/LeavingReason.csv
+            // Fields: Abgangsdatum, Remark: Innerhalb des Meldungszeitraums
+            // Fields: Sterbefall, Remark: Sterbefallorte, Url: src/Vodamep/Datasets/StatLp/DeathLocation.csv
+            // Fields: Entlassung Wohin, Remark: Entlassungsorte, Url: src/Vodamep/Datasets/StatLp/DischargeLocation.csv
+            // Fields: Entlassung Grund, Remark: Entlassungsgrund, Url: src/Vodamep/Datasets/StatLp/DischargeReason.csv
+            // Fields: Entlassung Wohin, Remark: Nicht erlaubt, wenn verstorben
+            // Fields: Entlassung Wohin Sontige, Remark: Nicht erlaubt, wenn verstorben
+            // Fields: Entlassung Grund, Remark: Nicht erlaubt, wenn verstorben
+            // Fields: Entlassung Grund Anderer, Remark: Nicht erlaubt, wenn verstorben
+            // Fields: Entlassung Wohin Sontige, Remark: Buchstaben, Ziffern, div. Sonderzeichen, 30 Zeichen
+            // Fields: Entlassung Grund Anderer, Remark: Buchstaben, Ziffern, div. Sonderzeichen, 30 Zeichen
             #endregion
 
             this.RuleFor(x => x.LeavingReason).NotEmpty().WithMessage(x => Validationmessages.StatLpLeavingReasonMustnotBeEmpty());

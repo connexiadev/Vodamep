@@ -19,8 +19,8 @@ namespace Vodamep.Hkpv.Validation
             // AreaDef: HKP
             // OrderDef: 04
             // SectionDef: Leistung
-            // StrengthDef: Hart
-            // Detail: Leistungen, Check: Auszubildende, Remark: Auszubildende dürfen keine med. Leistungen 6-10 durchführen., Group: Inhaltlich
+            // StrengthDef: Fehler
+            // Fields: Leistungen, Check: Auszubildende, Remark: Auszubildende dürfen keine med. Leistungen 6-10 durchführen., Group: Inhaltlich
             #endregion
 
             //corert kann derzeit nicht mit AnonymousType umgehen. Vielleicht später:  new  { x.Activities, x.Staffs }

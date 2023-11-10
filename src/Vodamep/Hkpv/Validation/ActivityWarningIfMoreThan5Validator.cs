@@ -16,7 +16,7 @@ namespace Vodamep.Hkpv.Validation
             // OrderDef: 04
             // SectionDef: Leistung
             // StrengthDef: Warnung
-            // Detail: Leistungen, Check: Gleiche Leistungen, Remark: Max. 5 x die gleiche Leistung pro Person und Tag, Group: Inhaltlich
+            // Fields: Leistungen, Check: Gleiche Leistungen, Remark: Max. 5 x die gleiche Leistung pro Person und Tag, Group: Inhaltlich
             #endregion
 
             RuleFor(x => x.Activities)

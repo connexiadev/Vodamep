@@ -14,10 +14,10 @@ namespace Vodamep.StatLp.Validation
             // AreaDef: STAT
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Eindeutigkeit
-            // Detail: Name/Geburtsdatum, Remark: Kein gleicher Name/Geburtstag, wenn nicht speziell deklariert, Group: Inhaltlich
+            // Fields: Name/Geburtsdatum, Remark: Kein gleicher Name/Geburtstag, wenn nicht speziell deklariert, Group: Inhaltlich
             #endregion
 
             this.RuleFor(x => new { x.Persons, x.Aliases })

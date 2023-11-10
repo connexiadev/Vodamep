@@ -17,25 +17,25 @@ namespace Vodamep.Hkpv.Validation
             // AreaDef: HKP
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Nachname
-            // Detail: Vorname
-            // Detail: Versicherung
-            // Detail: Staatsbürgerschaft
-            // Detail: Pflegestufe
-            // Detail: PLZ/Ort
-            // Detail: Geschlecht, Remark: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
+            // Fields: Nachname
+            // Fields: Vorname
+            // Fields: Versicherung
+            // Fields: Staatsbürgerschaft
+            // Fields: Pflegestufe
+            // Fields: PLZ/Ort
+            // Fields: Geschlecht, Remark: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
 
             // CheckDef: Erlaubte Werte
-            // Detail: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
-            // Detail: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
-            // Detail: Versicherung, Remark: Versicherungs-Liste, Url: src/Vodamep/Datasets/InsuranceCode.csv
-            // Detail: Staatsbürgerschaft, Remark: Staatsbürgerschaften-Liste, Url: src/Vodamep/Datasets/CountryCode.csv
-            // Detail: Pflegestufen, Remark: Pflegestufen-Liste, Url:  src/Vodamep/Datasets/CareAllowance.csv
-            // Detail: PLZ/Ort, Remark: PLZ/Orte-Liste, Url: src/Vodamep/Datasets/PostcodeCity.csv
-            // Detail: Geschlecht, Remark: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
+            // Fields: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Fields: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Fields: Versicherung, Remark: Versicherungs-Liste, Url: src/Vodamep/Datasets/InsuranceCode.csv
+            // Fields: Staatsbürgerschaft, Remark: Staatsbürgerschaften-Liste, Url: src/Vodamep/Datasets/CountryCode.csv
+            // Fields: Pflegestufen, Remark: Pflegestufen-Liste, Url:  src/Vodamep/Datasets/CareAllowance.csv
+            // Fields: PLZ/Ort, Remark: PLZ/Orte-Liste, Url: src/Vodamep/Datasets/PostcodeCity.csv
+            // Fields: Geschlecht, Remark: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
 
             #endregion
 

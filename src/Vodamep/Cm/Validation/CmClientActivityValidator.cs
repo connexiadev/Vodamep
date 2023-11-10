@@ -14,17 +14,17 @@ namespace Vodamep.Cm.Validation
             // AreaDef: CM
             // OrderDef: 03
             // SectionDef: Klienten-Leistung
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Leistungstyp
-            // Detail: Datum
-            // Detail: Leistungszeit
+            // Fields: Leistungstyp
+            // Fields: Datum
+            // Fields: Leistungszeit
 
             // CheckDef: Erlaubte Werte
-            // Detail: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Cm/ActivityType.csv
-            // Detail: Datum, Remark: Innerhalb des Meldungs-Zeitraums
-            // Detail: Leistungszeit, Remark: > 0, < 10000, in 15-Minuten-Schritten
+            // Fields: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Cm/ActivityType.csv
+            // Fields: Datum, Remark: Innerhalb des Meldungs-Zeitraums
+            // Fields: Leistungszeit, Remark: > 0, < 10000, in 15-Minuten-Schritten
             #endregion
 
             this.RuleFor(x => x.ActivityType).NotEmpty().WithMessage(x => Validationmessages.ReportBasePersonActivityNoCategory(x.PersonId, x.Date.ToDateTime().ToShortDateString()));

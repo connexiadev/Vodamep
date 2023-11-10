@@ -14,10 +14,10 @@ namespace Vodamep.Mkkp.Validation
             // AreaDef: MKKP
             // OrderDef: 03
             // SectionDef: Klient
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Erlaubte Werte
-            // Detail: Diagnosegruppen, Remark: Nur eine Palliativ Diagnose Gruppe pro Klient, Group: Inhaltlich
+            // Fields: Diagnosegruppen, Remark: Nur eine Palliativ Diagnose Gruppe pro Klient, Group: Inhaltlich
             #endregion
 
             RuleFor(x => x)

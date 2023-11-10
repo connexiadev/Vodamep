@@ -17,20 +17,20 @@ namespace Vodamep.Mkkp.Validation
             // AreaDef: MKKP
             // OrderDef: 03
             // SectionDef: Leistung
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Klient
-            // Detail: Mitarbeiter
-            // Detail: Einsatzort
-            // Detail: Leistungstyp
-            // Detail: Datum
-            // Detail: Leistungszeit
+            // Fields: Klient
+            // Fields: Mitarbeiter
+            // Fields: Einsatzort
+            // Fields: Leistungstyp
+            // Fields: Datum
+            // Fields: Leistungszeit
 
             // CheckDef: Erlaubte Werte
-            // Detail: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Mkkp/ActivityType.csv
-            // Detail: Einsatzort, Remark: Einsatzort-Liste, Url: src/Vodamep/Datasets/Mkkp/PlaceOfAction.csv
-            // Detail: Datum, Remark: Innerhalb des Meldungs-Zeitraums
+            // Fields: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Mkkp/ActivityType.csv
+            // Fields: Einsatzort, Remark: Einsatzort-Liste, Url: src/Vodamep/Datasets/Mkkp/PlaceOfAction.csv
+            // Fields: Datum, Remark: Innerhalb des Meldungs-Zeitraums
             #endregion
 
 

@@ -16,28 +16,28 @@ namespace Vodamep.Mkkp.Validation
             // AreaDef: MKKP
             // OrderDef: 01
             // SectionDef: Klient
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Geburtsdatum
-            // Detail: Zuweiser
-            // Detail: Sonstiger Zuweiser, Remark: Wenn Zuweiser = Sonstiger
-            // Detail: Arzt/Krankenhaus
-            // Detail: Arzt/Niedergelassen
-            // Detail: Versicherung
-            // Detail: Pflegestufe
-            // Detail: Geschlecht
-            // Detail: PLZ/Ort
+            // Fields: Geburtsdatum
+            // Fields: Zuweiser
+            // Fields: Sonstiger Zuweiser, Remark: Wenn Zuweiser = Sonstiger
+            // Fields: Arzt/Krankenhaus
+            // Fields: Arzt/Niedergelassen
+            // Fields: Versicherung
+            // Fields: Pflegestufe
+            // Fields: Geschlecht
+            // Fields: PLZ/Ort
 
             // CheckDef: Erlaubte Werte
-            // Detail: Arzt/Krankenhaus, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
-            // Detail: Arzt/Niedergelassen, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
-            // Detail: Versicherung, Remark: Versicherungs-Liste, Url: src/Vodamep/Datasets/InsuranceCode.csv
-            // Detail: PLZ/Ort, Remark: PLZ/Orte-Liste, Url: src/Vodamep/Datasets/PostcodeCity.csv
-            // Detail: Geschlecht, Remark: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
-            // Detail: Pflegestufen, Remark: Pflegestufen-Liste, Url:  src/Vodamep/Datasets/CareAllowance.csv
-            // Detail: Zuweiser, Remark: Zuweiser-Liste, Url: src/Vodamep/Datasets/Mkkp/Referrer.csv
-            // Detail: Diagnosegruppen, Remark: Diagnosegruppen-Liste, Url: src/Vodamep/Datasets/Mkkp/Diagnosisgroup.csv
+            // Fields: Arzt/Krankenhaus, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Fields: Arzt/Niedergelassen, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Fields: Versicherung, Remark: Versicherungs-Liste, Url: src/Vodamep/Datasets/InsuranceCode.csv
+            // Fields: PLZ/Ort, Remark: PLZ/Orte-Liste, Url: src/Vodamep/Datasets/PostcodeCity.csv
+            // Fields: Geschlecht, Remark: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
+            // Fields: Pflegestufen, Remark: Pflegestufen-Liste, Url:  src/Vodamep/Datasets/CareAllowance.csv
+            // Fields: Zuweiser, Remark: Zuweiser-Liste, Url: src/Vodamep/Datasets/Mkkp/Referrer.csv
+            // Fields: Diagnosegruppen, Remark: Diagnosegruppen-Liste, Url: src/Vodamep/Datasets/Mkkp/Diagnosisgroup.csv
             #endregion
 
             MkkpDisplayNameResolver displayNameResolver = new MkkpDisplayNameResolver();

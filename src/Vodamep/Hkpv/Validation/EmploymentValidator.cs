@@ -16,17 +16,17 @@ namespace Vodamep.Hkpv.Validation
             // AreaDef: HKP
             // OrderDef: 03
             // SectionDef: Anstellung
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Start
-            // Detail: Ende
-            // Detail: Stunden
+            // Fields: Start
+            // Fields: Ende
+            // Fields: Stunden
 
             // CheckDef: Erlaubte Werte
-            // Detail: Start, Remark: Innerhalb des Meldungs-Zeitraums
-            // Detail: Ende, Remark: Innerhalb des Meldungs-Zeitraums
-            // Detail: Stunden, Remark: Max. 100 pro Woche, Group: Inhaltlich
+            // Fields: Start, Remark: Innerhalb des Meldungs-Zeitraums
+            // Fields: Ende, Remark: Innerhalb des Meldungs-Zeitraums
+            // Fields: Stunden, Remark: Max. 100 pro Woche, Group: Inhaltlich
             #endregion
 
 

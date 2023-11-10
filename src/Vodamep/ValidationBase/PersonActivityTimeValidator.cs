@@ -10,26 +10,26 @@ namespace Vodamep.ValidationBase
         // AreaDef: MOHI
         // OrderDef: 03
         // SectionDef: Leistung
-        // StrengthDef: Hart
+        // StrengthDef: Fehler
 
         // CheckDef: Muss Feld
-        // Detail: Leistungszeit
+        // Fields: Leistungszeit
 
         // CheckDef: Erlaubte Werte
-        // Detail: Leistungszeit, Remark: > 15, < 10000
+        // Fields: Leistungszeit, Remark: > 15, < 10000
         #endregion
 
         #region Documentation
         // AreaDef: TB
         // OrderDef: 03
         // SectionDef: Leistung
-        // StrengthDef: Hart
+        // StrengthDef: Fehler
 
         // CheckDef: Muss Feld
-        // Detail: Leistungszeit
+        // Fields: Leistungszeit
 
         // CheckDef: Erlaubte Werte
-        // Detail: Leistungszeit, Remark: > 15, < 10000
+        // Fields: Leistungszeit, Remark: > 15, < 10000
         #endregion
 
         public PersonActivityTimeValidator(float minValue, float maxValue)

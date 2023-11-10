@@ -31,8 +31,8 @@ namespace Vodamep.Hkpv.Validation
                    // AreaDef: HKP
                    // OrderDef: 04
                    // SectionDef: Leistung
-                   // StrengthDef: Hart
-                   // Detail: Leistungen, Check: Mitarbeiter, Remark: Alle Mitarbeiter müssen mind. 1 Leistung haben
+                   // StrengthDef: Fehler
+                   // Fields: Leistungen, Check: Mitarbeiter, Remark: Alle Mitarbeiter müssen mind. 1 Leistung haben
                    #endregion
 
                    var staffs = a.Item1;

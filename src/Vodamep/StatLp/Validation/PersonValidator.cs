@@ -13,15 +13,15 @@ namespace Vodamep.StatLp.Validation
             // AreaDef: STAT
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Nachname
-            // Detail: Vorname
+            // Fields: Nachname
+            // Fields: Vorname
 
             // CheckDef: Erlaubte Werte
-            // Detail: Nachname, Remark: 2-50 Zeichen, Buchstaben, Bindestrich, Leerzeichen
-            // Detail: Vorname, Remark: 2-30 Zeichen, Buchstaben, Bindestrich, Leerzeichen
+            // Fields: Nachname, Remark: 2-50 Zeichen, Buchstaben, Bindestrich, Leerzeichen
+            // Fields: Vorname, Remark: 2-30 Zeichen, Buchstaben, Bindestrich, Leerzeichen
             #endregion
 
             this.RuleFor(x => x.FamilyName).NotEmpty();

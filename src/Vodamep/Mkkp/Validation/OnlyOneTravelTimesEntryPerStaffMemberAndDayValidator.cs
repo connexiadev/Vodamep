@@ -14,10 +14,10 @@ namespace Vodamep.Mkkp.Validation
             // AreaDef: MKKP
             // OrderDef: 04
             // SectionDef: Fahrtzeit
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Erlaubte Werte
-            // Detail: Zeit/Mitarbeiter, Remark: Nur ein Eintrag pro Mitarbeiter/Tag, Group: Inhaltlich
+            // Fields: Zeit/Mitarbeiter, Remark: Nur ein Eintrag pro Mitarbeiter/Tag, Group: Inhaltlich
             #endregion
 
             this.RuleFor(x => x.TravelTimes)

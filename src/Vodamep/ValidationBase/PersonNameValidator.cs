@@ -12,72 +12,72 @@ namespace Vodamep.ValidationBase
             // AreaDef: AGP
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Nachname
-            // Detail: Vorname
+            // Fields: Nachname
+            // Fields: Vorname
 
             // CheckDef: Erlaubte Werte
-            // Detail: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
-            // Detail: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Fields: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Fields: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
 
 
             // AreaDef: MKKP
             // OrderDef: 01
             // SectionDef: Klient
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Nachname
-            // Detail: Vorname
+            // Fields: Nachname
+            // Fields: Vorname
 
             // CheckDef: Erlaubte Werte
-            // Detail: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
-            // Detail: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Fields: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Fields: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
 
 
 
             // AreaDef: CM
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Nachname
-            // Detail: Vorname
+            // Fields: Nachname
+            // Fields: Vorname
 
             // CheckDef: Erlaubte Werte
-            // Detail: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen
-            // Detail: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen
+            // Fields: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen
+            // Fields: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen
 
 
             // AreaDef: MOHI
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Nachname
-            // Detail: Vorname
+            // Fields: Nachname
+            // Fields: Vorname
 
             // CheckDef: Erlaubte Werte
-            // Detail: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen
-            // Detail: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen
+            // Fields: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen
+            // Fields: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen
 
 
             // AreaDef: TB
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Nachname
-            // Detail: Vorname
+            // Fields: Nachname
+            // Fields: Vorname
 
             // CheckDef: Erlaubte Werte
-            // Detail: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen
-            // Detail: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen
+            // Fields: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen
+            // Fields: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen
 
             #endregion
 

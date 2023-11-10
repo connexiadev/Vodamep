@@ -16,8 +16,8 @@ namespace Vodamep.Hkpv.Validation
             // AreaDef: HKP
             // OrderDef: 04
             // SectionDef: Leistung
-            // StrengthDef: Hart
-            // Detail: Leistungen, Check: Hausbesuch, Remark: Hausbesuch ohne zusätzliche Leistung 4-17, ab 2019, Group: Inhaltlich
+            // StrengthDef: Fehler
+            // Fields: Leistungen, Check: Hausbesuch, Remark: Hausbesuch ohne zusätzliche Leistung 4-17, ab 2019, Group: Inhaltlich
             #endregion
 
             RuleFor(x => x.Entries)

@@ -16,10 +16,10 @@ namespace Vodamep.Mkkp.Validation
         // AreaDef: MKKP
         // OrderDef: 04
         // SectionDef: Fahrtzeit
-        // StrengthDef: Hart
+        // StrengthDef: Fehler
 
         // CheckDef: Erlaubte Werte
-        // Detail: Zeit, Remark: > 0
+        // Fields: Zeit, Remark: > 0
         #endregion
 
 

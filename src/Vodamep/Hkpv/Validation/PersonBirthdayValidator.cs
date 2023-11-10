@@ -15,14 +15,14 @@ namespace Vodamep.Hkpv.Validation
             // AreaDef: HKP
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Geburtsdatum
+            // Fields: Geburtsdatum
 
             // CheckDef: Erlaubte Werte
-            // Detail: Geburtsdatum, Remark: > 01.01.1900, nicht in der Zukunft
-            // Detail: Geburtsdatum, Remark: Abhängigkeit zur SVNR, Strength: Warnung
+            // Fields: Geburtsdatum, Remark: > 01.01.1900, nicht in der Zukunft
+            // Fields: Geburtsdatum, Remark: Abhängigkeit zur SVNR, Strength: Warnung
 
             #endregion
 

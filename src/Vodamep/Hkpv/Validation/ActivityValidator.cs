@@ -15,17 +15,17 @@ namespace Vodamep.Hkpv.Validation
             // AreaDef: HKP
             // OrderDef: 04
             // SectionDef: Leistung
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Datum
-            // Detail: Mitarbeiter
-            // Detail: Klient
-            // Detail: Leistungen, Remark: Mindestens 1 Eintrag
+            // Fields: Datum
+            // Fields: Mitarbeiter
+            // Fields: Klient
+            // Fields: Leistungen, Remark: Mindestens 1 Eintrag
 
             // CheckDef: Erlaubte Werte
-            // Detail: Datum, Remark: Innerhalb des Meldungs-Zeitraums
-            // Detail: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Hkpv/ActivityType.csv
+            // Fields: Datum, Remark: Innerhalb des Meldungs-Zeitraums
+            // Fields: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Hkpv/ActivityType.csv
             #endregion
 
             this.RuleFor(x => x.Date).NotEmpty();

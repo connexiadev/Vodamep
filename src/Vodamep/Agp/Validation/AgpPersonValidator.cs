@@ -17,25 +17,25 @@ namespace Vodamep.Agp.Validation
             // AreaDef: AGP
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Geschlecht
-            // Detail: Pflegestufe
-            // Detail: Zuweiser
-            // Detail: Sonstiger Zuweiser, Remark: Wenn Zuweiser = Sonstiger
-            // Detail: PLZ/Ort
-            // Detail: Staatsbürgerschaft
-            // Detail: Diagnosegruppen, Remark: Mindestens 1 Eintrag
+            // Fields: Geschlecht
+            // Fields: Pflegestufe
+            // Fields: Zuweiser
+            // Fields: Sonstiger Zuweiser, Remark: Wenn Zuweiser = Sonstiger
+            // Fields: PLZ/Ort
+            // Fields: Staatsbürgerschaft
+            // Fields: Diagnosegruppen, Remark: Mindestens 1 Eintrag
 
             // CheckDef: Erlaubte Werte
-            // Detail: Geschlecht, Remark: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
-            // Detail: Pflegestufen, Remark: Pflegestufen-Liste, Url:  src/Vodamep/Datasets/CareAllowance.csv
-            // Detail: Zuweiser, Remark: Zuweiser-Liste, Url: src/Vodamep/Datasets/Agp/Referrer.csv
-            // Detail: PLZ/Ort, Remark: PLZ/Orte-Liste, Url: src/Vodamep/Datasets/PostcodeCity.csv
-            // Detail: Staatsbürgerschaft, Remark: Staatsbürgerschaften-Liste, Url: src/Vodamep/Datasets/CountryCode.csv
-            // Detail: Diagnosegruppen, Remark: Diagnosegruppen-Liste, Url: src/Vodamep/Datasets/Agp/Diagnosisgroup.csv
-            // Detail: Versicherung, Remark: Versicherungs-Liste, Url: src/Vodamep/Datasets/InsuranceCode.csv
+            // Fields: Geschlecht, Remark: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
+            // Fields: Pflegestufen, Remark: Pflegestufen-Liste, Url:  src/Vodamep/Datasets/CareAllowance.csv
+            // Fields: Zuweiser, Remark: Zuweiser-Liste, Url: src/Vodamep/Datasets/Agp/Referrer.csv
+            // Fields: PLZ/Ort, Remark: PLZ/Orte-Liste, Url: src/Vodamep/Datasets/PostcodeCity.csv
+            // Fields: Staatsbürgerschaft, Remark: Staatsbürgerschaften-Liste, Url: src/Vodamep/Datasets/CountryCode.csv
+            // Fields: Diagnosegruppen, Remark: Diagnosegruppen-Liste, Url: src/Vodamep/Datasets/Agp/Diagnosisgroup.csv
+            // Fields: Versicherung, Remark: Versicherungs-Liste, Url: src/Vodamep/Datasets/InsuranceCode.csv
             #endregion
 
             this.RuleFor(x => x.Gender).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(displayNameResolver.GetDisplayName(nameof(Person)), x.GetDisplayName()));

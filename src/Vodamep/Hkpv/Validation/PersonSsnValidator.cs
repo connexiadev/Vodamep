@@ -12,10 +12,10 @@ namespace Vodamep.Hkpv.Validation
             // AreaDef: HKP
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Erlaubte Werte
-            // Detail: SVNR, Remark: Gültige SVNR, Prüfziffer, Geburtsdatum
+            // Fields: SVNR, Remark: Gültige SVNR, Prüfziffer, Geburtsdatum
 
             #endregion
             this.CascadeMode = CascadeMode.StopOnFirstFailure;

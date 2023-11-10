@@ -14,13 +14,13 @@ namespace Vodamep.Hkpv.Validation
             // AreaDef: HKP
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: SVNR
+            // Fields: SVNR
 
             // CheckDef: Erlaubte Werte
-            // Detail: SVNR, Remark: Eindeutig in der Meldung
+            // Fields: SVNR, Remark: Eindeutig in der Meldung
             #endregion
 
             RuleFor(x => x.Persons)

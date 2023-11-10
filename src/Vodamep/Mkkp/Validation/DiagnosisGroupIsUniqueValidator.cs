@@ -14,10 +14,10 @@ namespace Vodamep.Mkkp.Validation
             // AreaDef: MKKP
             // OrderDef: 03
             // SectionDef: Klient
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Erlaubte Werte
-            // Detail: Diagnosegruppen, Remark: Keine doppelten, gleichen Einträge
+            // Fields: Diagnosegruppen, Remark: Keine doppelten, gleichen Einträge
             #endregion
 
             RuleFor(x => x)

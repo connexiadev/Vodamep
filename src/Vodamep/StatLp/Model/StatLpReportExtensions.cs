@@ -54,13 +54,13 @@ namespace Vodamep.StatLp.Model
             // AreaDef: STAT
             // OrderDef: 03
             // SectionDef: Aufenthalt
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Überschneidungen
-            // Detail: Von/Bis/Aufnahmeart, Remark: Keine Überscheidungen bei mehreren Aufenthalten, Group: Inhaltlich
+            // Fields: Von/Bis/Aufnahmeart, Remark: Keine Überscheidungen bei mehreren Aufenthalten, Group: Inhaltlich
 
             // CheckDef: Aufeninanderfolgende
-            // Detail: Von/Bis/Aufnahmeart, Remark: Unterschiedliche Aufnahmeart für aufeinanderf. Aufenthalte, Group: Inhaltlich
+            // Fields: Von/Bis/Aufnahmeart, Remark: Unterschiedliche Aufnahmeart für aufeinanderf. Aufenthalte, Group: Inhaltlich
             #endregion
 
 

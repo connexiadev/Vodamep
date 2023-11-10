@@ -10,20 +10,20 @@ namespace Vodamep.ValidationBase
         // AreaDef: MOHI
         // OrderDef: 03
         // SectionDef: Leistung
-        // StrengthDef: Hart
+        // StrengthDef: Fehler
 
         // CheckDef: Erlaubte Werte
-        // Detail: Leistungszeit, Remark: In 15-Minuten-Schritten
+        // Fields: Leistungszeit, Remark: In 15-Minuten-Schritten
         #endregion
 
         #region Documentation
         // AreaDef: TB
         // OrderDef: 03
         // SectionDef: Leistung
-        // StrengthDef: Hart
+        // StrengthDef: Fehler
 
         // CheckDef: Erlaubte Werte
-        // Detail: Leistungszeit, Remark: In 15-Minuten-Schritten
+        // Fields: Leistungszeit, Remark: In 15-Minuten-Schritten
         #endregion
 
         public ActivityStepLengthValidator(float stepLength)

@@ -13,10 +13,10 @@ namespace Vodamep.Agp.Validation
             // AreaDef: AGP
             // OrderDef: 03
             // SectionDef: Klienten-Leistung
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Erlaubte Werte
-            // Detail: Leistungszeit, Remark: > 0, in 5-Minuten-Schritten
+            // Fields: Leistungszeit, Remark: > 0, in 5-Minuten-Schritten
             #endregion
 
             this.RuleFor(x => x.Minutes)

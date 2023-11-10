@@ -16,21 +16,21 @@ namespace Vodamep.Agp.Validation
             // AreaDef: AGP
             // OrderDef: 03
             // SectionDef: Klienten-Leistung
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Klient
-            // Detail: Leistungstyp
-            // Detail: Einsatzort
-            // Detail: Datum
-            // Detail: Leistungszeit
+            // Fields: Klient
+            // Fields: Leistungstyp
+            // Fields: Einsatzort
+            // Fields: Datum
+            // Fields: Leistungszeit
 
             // CheckDef: Erlaubte Werte
-            // Detail: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Agp/ActivityType.csv
-            // Detail: Leistungstyp, Remark: Keine doppelten, gleichen Einträge
-            // Detail: Datum, Remark: Innerhalb des Meldungszeitraums
-            // Detail: Einsatzort, Remark: Einsatzort-Liste, Url: src/Vodamep/Datasets/Agp/PlaceOfAction.csv
-            // Detail: Datum, Remark: Innerhalb des Meldungs-Zeitraums
+            // Fields: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Agp/ActivityType.csv
+            // Fields: Leistungstyp, Remark: Keine doppelten, gleichen Einträge
+            // Fields: Datum, Remark: Innerhalb des Meldungszeitraums
+            // Fields: Einsatzort, Remark: Einsatzort-Liste, Url: src/Vodamep/Datasets/Agp/PlaceOfAction.csv
+            // Fields: Datum, Remark: Innerhalb des Meldungs-Zeitraums
             #endregion
 
             var displayNameResolver = new AgpDisplayNameResolver();

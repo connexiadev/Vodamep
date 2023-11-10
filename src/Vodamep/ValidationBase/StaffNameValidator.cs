@@ -13,15 +13,15 @@ namespace Vodamep.ValidationBase
             // AreaDef: MKKP
             // OrderDef: 02
             // SectionDef: Mitarbeiter
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Nachname
-            // Detail: Vorname
+            // Fields: Nachname
+            // Fields: Vorname
 
             // CheckDef: Erlaubte Werte
-            // Detail: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
-            // Detail: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Fields: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Fields: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
             #endregion
 
 

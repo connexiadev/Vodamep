@@ -17,10 +17,10 @@ namespace Vodamep.StatLp.Validation
             // AreaDef: STAT
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Erlaubte Werte
-            // Detail: Aufenthalt, Remark: Nur Personen mit gültigem Aufenthalt, Group: Inhaltlich
+            // Fields: Aufenthalt, Remark: Nur Personen mit gültigem Aufenthalt, Group: Inhaltlich
             #endregion
 
 
@@ -119,10 +119,10 @@ namespace Vodamep.StatLp.Validation
         // AreaDef: STAT
         // OrderDef: 03
         // SectionDef: Aufenthalt
-        // StrengthDef: Hart
+        // StrengthDef: Fehler
 
         // CheckDef: Angaben bei Aufnahme
-        // Detail: Hauptmerkmale, Remark: Meldung der 3 Hauptmerkmale bei Aufnahme, Group: Inhaltlich
+        // Fields: Hauptmerkmale, Remark: Meldung der 3 Hauptmerkmale bei Aufnahme, Group: Inhaltlich
         #endregion
 
         private void AttributeValidation(CustomContext ctx, StatLpReport report, GroupedStay s)
@@ -158,11 +158,11 @@ namespace Vodamep.StatLp.Validation
         // AreaDef: STAT
         // OrderDef: 03
         // SectionDef: Aufenthalt
-        // StrengthDef: Hart
+        // StrengthDef: Fehler
 
         // CheckDef: Aufenthaltswechsel
-        // Detail: Aufenthaltsart, Remark: Daueraufnahme auf Urlaubspflege nicht erlaubt, Group: Inhaltlich
-        // Detail: Aufenthaltsart, Remark: Daueraufnahme auf Übergangspflege nicht erlaubt, Group: Inhaltlich
+        // Fields: Aufenthaltsart, Remark: Daueraufnahme auf Urlaubspflege nicht erlaubt, Group: Inhaltlich
+        // Fields: Aufenthaltsart, Remark: Daueraufnahme auf Übergangspflege nicht erlaubt, Group: Inhaltlich
         #endregion
 
         private void AdmissionTypeChangeValidation(CustomContext ctx, StatLpReport report, GroupedStay s, AdmissionType from, AdmissionType to)
@@ -181,13 +181,13 @@ namespace Vodamep.StatLp.Validation
         // AreaDef: STAT
         // OrderDef: 03
         // SectionDef: Aufenthalt
-        // StrengthDef: Hart
+        // StrengthDef: Fehler
 
         // CheckDef: Aufenthaltsdauer Urlaub
-        // Detail: Von/Bis/Aufnahmeart, Remark: Urlaub von der Pflege, 42 Tage, Group: Inhaltlich
+        // Fields: Von/Bis/Aufnahmeart, Remark: Urlaub von der Pflege, 42 Tage, Group: Inhaltlich
 
         // CheckDef: Aufenthaltsdauer Übergang
-        // Detail: Von/Bis/Aufnahmeart, Remark: Übergangspflege, 365 Tage, Group: Inhaltlich
+        // Fields: Von/Bis/Aufnahmeart, Remark: Übergangspflege, 365 Tage, Group: Inhaltlich
         #endregion
 
 
@@ -213,10 +213,10 @@ namespace Vodamep.StatLp.Validation
         // AreaDef: STAT
         // OrderDef: 04
         // SectionDef: Aufenthalt
-        // StrengthDef: Hart
+        // StrengthDef: Fehler
 
         // CheckDef: Angaben bei Aufnahme
-        // Detail: Aufnahmedaten, Remark: Eine Meldung der Aufnahmedaten bei Aufenthaltsstart, Group: Inhaltlich
+        // Fields: Aufnahmedaten, Remark: Eine Meldung der Aufnahmedaten bei Aufenthaltsstart, Group: Inhaltlich
         #endregion
 
         private void AdmissionValidation(CustomContext ctx, StatLpReport report, Person person, GroupedStay s)
@@ -256,10 +256,10 @@ namespace Vodamep.StatLp.Validation
         // AreaDef: STAT
         // OrderDef: 04
         // SectionDef: Aufenthalt
-        // StrengthDef: Hart
+        // StrengthDef: Fehler
 
         // CheckDef: Angaben bei Abgang
-        // Detail: Abgangsdaten, Remark: Eine Meldung der Abgangsdaten bei Aufenthaltsende, Group: Inhaltlich
+        // Fields: Abgangsdaten, Remark: Eine Meldung der Abgangsdaten bei Aufenthaltsende, Group: Inhaltlich
         #endregion
 
         private void LeavingValidation(CustomContext ctx, StatLpReport report, Person person, GroupedStay s)

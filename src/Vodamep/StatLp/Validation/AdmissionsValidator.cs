@@ -15,10 +15,10 @@ namespace Vodamep.StatLp.Validation
             // AreaDef: STAT
             // OrderDef: 04
             // SectionDef: Aufnahme
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Person
+            // Fields: Person
             #endregion
 
 

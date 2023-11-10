@@ -13,49 +13,49 @@ namespace Vodamep.ValidationBase
             // AreaDef: AGP
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Geburtsdatum
+            // Fields: Geburtsdatum
 
             // CheckDef: Erlaubte Werte
-            // Detail: Geburtsdatum, Remark: > 01.01.1900, nicht in der Zukunft
+            // Fields: Geburtsdatum, Remark: > 01.01.1900, nicht in der Zukunft
 
             // AreaDef: CM
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Geburtsdatum
+            // Fields: Geburtsdatum
 
             // CheckDef: Erlaubte Werte
-            // Detail: Geburtsdatum, Remark: > 01.01.1890, nicht in der Zukunft
+            // Fields: Geburtsdatum, Remark: > 01.01.1890, nicht in der Zukunft
 
 
             // AreaDef: MOHI
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Geburtsdatum
+            // Fields: Geburtsdatum
 
             // CheckDef: Erlaubte Werte
-            // Detail: Geburtsdatum, Remark: > 01.01.1890, nicht in der Zukunft
+            // Fields: Geburtsdatum, Remark: > 01.01.1890, nicht in der Zukunft
 
 
 
             // AreaDef: TB
             // OrderDef: 01
             // SectionDef: Person
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Geburtsdatum
+            // Fields: Geburtsdatum
 
             // CheckDef: Erlaubte Werte
-            // Detail: Geburtsdatum, Remark: > 01.01.1890, nicht in der Zukunft
+            // Fields: Geburtsdatum, Remark: > 01.01.1890, nicht in der Zukunft
             #endregion
 
             this.CascadeMode = CascadeMode.StopOnFirstFailure;

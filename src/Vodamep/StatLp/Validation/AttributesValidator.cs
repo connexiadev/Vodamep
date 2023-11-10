@@ -18,10 +18,10 @@ namespace Vodamep.StatLp.Validation
             // AreaDef: STAT
             // OrderDef: 02
             // SectionDef: Hauptmerkmal
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Erlaubte Werte
-            // Detail: Finanzierung/Pflegestufen, Remark: Keine Duplikate bei Person/Datum/Finanzierung/Pflegestufen
+            // Fields: Finanzierung/Pflegestufen, Remark: Keine Duplikate bei Person/Datum/Finanzierung/Pflegestufen
 
             #endregion
 

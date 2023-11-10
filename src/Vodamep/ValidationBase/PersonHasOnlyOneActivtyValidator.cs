@@ -13,20 +13,20 @@ namespace Vodamep.ValidationBase
             // AreaDef: MOHI
             // OrderDef: 02
             // SectionDef: Leistung
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Erlaubte Werte
-            // Detail: Leistungszeit, Remark: Nur ein Eintrag pro Person
+            // Fields: Leistungszeit, Remark: Nur ein Eintrag pro Person
             #endregion
 
             #region Documentation
             // AreaDef: TB
             // OrderDef: 02
             // SectionDef: Leistung
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Erlaubte Werte
-            // Detail: Leistungszeit, Remark: Nur ein Eintrag pro Person
+            // Fields: Leistungszeit, Remark: Nur ein Eintrag pro Person
             #endregion
 
             this.RuleFor(x => x)

@@ -15,10 +15,10 @@ namespace Vodamep.Mkkp.Validation
             // AreaDef: MKKP
             // OrderDef: 03
             // SectionDef: Klient
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Diagnosegruppen
+            // Fields: Diagnosegruppen
             #endregion
 
             RuleFor(x => x)

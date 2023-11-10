@@ -17,17 +17,17 @@ namespace Vodamep.Agp.Validation
             // AreaDef: AGP
             // OrderDef: 02
             // SectionDef: Leistung
-            // StrengthDef: Hart
+            // StrengthDef: Fehler
 
             // CheckDef: Muss Feld
-            // Detail: Leistungstyp
-            // Detail: Datum
-            // Detail: Leistungszeit
+            // Fields: Leistungstyp
+            // Fields: Datum
+            // Fields: Leistungszeit
 
             // CheckDef: Erlaubte Werte
-            // Detail: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Agp/StaffActivityType.csv
-            // Detail: Datum, Remark: Innerhalb des Meldungs-Zeitraums
-            // Detail: Leistungszeit, Remark: > 0, in 5-Minuten-Schritten
+            // Fields: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Agp/StaffActivityType.csv
+            // Fields: Datum, Remark: Innerhalb des Meldungs-Zeitraums
+            // Fields: Leistungszeit, Remark: > 0, in 5-Minuten-Schritten
             #endregion
 
             var displayNameResolver = new AgpDisplayNameResolver();
