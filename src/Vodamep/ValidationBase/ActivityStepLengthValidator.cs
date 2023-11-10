@@ -6,6 +6,26 @@ namespace Vodamep.ValidationBase
 {
     internal class ActivityStepLengthValidator : AbstractValidator<IPersonActivity>
     {
+        #region Documentation
+        // AreaDef: MOHI
+        // OrderDef: 03
+        // SectionDef: Leistung
+        // StrengthDef: Hart
+
+        // CheckDef: Erlaubte Werte
+        // Detail: Leistungszeit, Remark: In 15-Minuten-Schritten
+        #endregion
+
+        #region Documentation
+        // AreaDef: TB
+        // OrderDef: 03
+        // SectionDef: Leistung
+        // StrengthDef: Hart
+
+        // CheckDef: Erlaubte Werte
+        // Detail: Leistungszeit, Remark: In 15-Minuten-Schritten
+        #endregion
+
         public ActivityStepLengthValidator(float stepLength)
         {
             this.RuleFor(x => x.Time)

@@ -50,6 +50,35 @@ namespace Vodamep.ValidationBase
             // CheckDef: Erlaubte Werte
             // Detail: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen
             // Detail: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen
+
+
+            // AreaDef: MOHI
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Hart
+
+            // CheckDef: Muss Feld
+            // Detail: Nachname
+            // Detail: Vorname
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen
+            // Detail: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen
+
+
+            // AreaDef: TB
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Hart
+
+            // CheckDef: Muss Feld
+            // Detail: Nachname
+            // Detail: Vorname
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen
+            // Detail: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen
+
             #endregion
 
             this.RuleFor(x => x.FamilyName).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(x.GetDisplayName()));
