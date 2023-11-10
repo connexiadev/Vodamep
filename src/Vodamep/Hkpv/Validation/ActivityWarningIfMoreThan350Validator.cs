@@ -13,6 +13,14 @@ namespace Vodamep.Hkpv.Validation
         public ActivityWarningIfMoreThan350Validator()
             : base()
         {
+            #region Documentation
+            // AreaDef: HKP
+            // OrderDef: 04
+            // SectionDef: Leistung
+            // StrengthDef: Hart
+            // Detail: Leistungen, Check: Leistungspunkte, Remark: Max. 350 Leistungspunkte pro Person/Monat, Group: Inhaltlich
+            #endregion
+
             this.RuleFor(x => new Tuple<IList<Activity>, IEnumerable<Person>>(x.Activities, x.Persons))
                 .Custom((a, ctx) =>
                 {

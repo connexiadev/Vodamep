@@ -20,6 +20,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="Datasets\Hkpv\ActivityType.csv" />
 	  <None Remove="Datasets\Hkpv\Gender.csv" />
 	  <None Remove="Datasets\MainAttendanceRelation.csv" />
 	</ItemGroup>
@@ -35,6 +36,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<EmbeddedResource Include="Datasets\Hkpv\ActivityType.csv" />
 		<EmbeddedResource Include="Datasets\Hkpv\Gender.csv" />
 		<EmbeddedResource Include="Datasets\MainAttendanceRelation.csv" />
 		<EmbeddedResource Include="Datasets\StatLp\AdmissionLocation.csv" />

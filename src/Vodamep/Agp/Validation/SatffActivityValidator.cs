@@ -26,7 +26,7 @@ namespace Vodamep.Agp.Validation
 
             // CheckDef: Erlaubte Werte
             // Detail: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Agp/StaffActivityType.csv
-            // Detail: Datum, Remark: Innerhalb des Berichts-Zeitraums
+            // Detail: Datum, Remark: Innerhalb des Meldungs-Zeitraums
             // Detail: Leistungszeit, Remark: > 0, in 5-Minuten-Schritten
             #endregion
 

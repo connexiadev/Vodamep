@@ -43,6 +43,15 @@ namespace Vodamep.Hkpv.Validation
             : base()
         {
 
+            #region Documentation
+            // AreaDef: HKP
+            // OrderDef: 03
+            // SectionDef: Anstellung
+            // StrengthDef: Hart
+
+            // Detail: Mitarbeiter, Check: Leistungsdatum, Remark: Leistungen außerhalb des Anstellungsverhältnisses, Group: Inhaltlich
+            #endregion
+
             //corert kann derzeit nicht mit AnonymousType umgehen. Vielleicht später:  new  { x.Activities, x.Staffs }
             this.RuleFor(x => x)
                 .Custom((x, ctx) =>

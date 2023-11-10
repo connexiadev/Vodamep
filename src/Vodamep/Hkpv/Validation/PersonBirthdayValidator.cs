@@ -11,6 +11,22 @@ namespace Vodamep.Hkpv.Validation
     {
         public PersonBirthdayValidator()
         {
+            #region Documentation
+            // AreaDef: HKP
+            // OrderDef: 01
+            // SectionDef: Person
+            // StrengthDef: Hart
+
+            // CheckDef: Muss Feld
+            // Detail: Geburtsdatum
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Geburtsdatum, Remark: > 01.01.1900, nicht in der Zukunft
+            // Detail: Geburtsdatum, Remark: Abhängigkeit zur SVNR, Strength: Warnung
+
+            #endregion
+
+
             this.CascadeMode = CascadeMode.StopOnFirstFailure;
 
             RuleFor(x => x.Birthday)

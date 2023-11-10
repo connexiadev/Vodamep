@@ -11,6 +11,23 @@ namespace Vodamep.Hkpv.Validation
     {
         public ActivityValidator(DateTime from, DateTime to)
         {
+            #region Documentation
+            // AreaDef: HKP
+            // OrderDef: 04
+            // SectionDef: Leistung
+            // StrengthDef: Hart
+
+            // CheckDef: Muss Feld
+            // Detail: Datum
+            // Detail: Mitarbeiter
+            // Detail: Klient
+            // Detail: Leistungen, Remark: Mindestens 1 Eintrag
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Datum, Remark: Innerhalb des Meldungs-Zeitraums
+            // Detail: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Hkpv/ActivityType.csv
+            #endregion
+
             this.RuleFor(x => x.Date).NotEmpty();
             this.RuleFor(x => x.Date).SetValidator(new TimestampWithOutTimeValidator()).Unless(x => x.Date == null);
 

@@ -14,6 +14,27 @@ namespace Vodamep.Hkpv.Validation
     {
         public StaffValidator(DateTime from, DateTime to)
         {
+            #region Documentation
+            // AreaDef: HKP
+            // OrderDef: 02
+            // SectionDef: Mitarbeiter
+            // StrengthDef: Hart
+
+            // CheckDef: Muss Feld
+            // Detail: Nachname
+            // Detail: Vorname
+            // Detail: Qualifizierung, Remark: Ab 2019
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Detail: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Detail: Qualifizierung, Remark: Vor 2019 alle Bezeichnungen erlaubt, Strength: Warnung
+            // Detail: Qualifizierung, Remark: Ab 2019 nur Qualifizierungs-Liste, Url: src/Vodamep/Datasets/QualificationCode.csv
+            // Detail: Anstellung, Remark: Keine Überschneidungen der Anstellungszeiträume
+
+            #endregion
+
+
             this.RuleFor(x => x.FamilyName).NotEmpty();
             this.RuleFor(x => x.GivenName).NotEmpty();
 
