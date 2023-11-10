@@ -11,6 +11,35 @@ namespace Vodamep.Mkkp.Validation
     {
         public MkkpPersonValidator()
         {
+
+            #region Documentation
+            // AreaDef: MKKP
+            // OrderDef: 01
+            // SectionDef: Klient
+            // StrengthDef: Hart
+
+            // CheckDef: Muss Feld
+            // Detail: Geburtsdatum
+            // Detail: Zuweiser
+            // Detail: Sonstiger Zuweiser, Remark: Wenn Zuweiser = Sonstiger
+            // Detail: Arzt/Krankenhaus
+            // Detail: Arzt/Niedergelassen
+            // Detail: Versicherung
+            // Detail: Pflegestufe
+            // Detail: Geschlecht
+            // Detail: PLZ/Ort
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Arzt/Krankenhaus, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Detail: Arzt/Niedergelassen, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Detail: Versicherung, Remark: Versicherungs-Liste, Url: src/Vodamep/Datasets/InsuranceCode.csv
+            // Detail: PLZ/Ort, Remark: PLZ/Orte-Liste, Url: src/Vodamep/Datasets/PostcodeCity.csv
+            // Detail: Geschlecht, Remark: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
+            // Detail: Pflegestufen, Remark: Pflegestufen-Liste, Url:  src/Vodamep/Datasets/CareAllowance.csv
+            // Detail: Zuweiser, Remark: Zuweiser-Liste, Url: src/Vodamep/Datasets/Mkkp/Referrer.csv
+            // Detail: Diagnosegruppen, Remark: Diagnosegruppen-Liste, Url: src/Vodamep/Datasets/Mkkp/Diagnosisgroup.csv
+            #endregion
+
             MkkpDisplayNameResolver displayNameResolver = new MkkpDisplayNameResolver();
 
             this.RuleFor(x => x.Birthday).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(displayNameResolver.GetDisplayName(nameof(Person)), x.GetDisplayName()));

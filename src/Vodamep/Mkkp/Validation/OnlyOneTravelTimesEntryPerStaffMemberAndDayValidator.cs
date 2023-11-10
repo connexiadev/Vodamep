@@ -10,6 +10,16 @@ namespace Vodamep.Mkkp.Validation
     {
         public OnlyOneTravelTimesEntryPerStaffMemberAndDayValidator()
         {
+            #region Documentation
+            // AreaDef: MKKP
+            // OrderDef: 04
+            // SectionDef: Fahrtzeit
+            // StrengthDef: Hart
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Zeit/Mitarbeiter, Remark: Nur ein Eintrag pro Mitarbeiter/Tag, Group: Inhaltlich
+            #endregion
+
             this.RuleFor(x => x.TravelTimes)
                 .Custom((travelTimes, ctx) =>
 

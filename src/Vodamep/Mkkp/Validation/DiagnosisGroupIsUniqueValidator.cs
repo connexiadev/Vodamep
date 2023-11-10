@@ -10,6 +10,16 @@ namespace Vodamep.Mkkp.Validation
     {
         public DiagnosisGroupIsUniqueValidator()
         {
+            #region Documentation
+            // AreaDef: MKKP
+            // OrderDef: 03
+            // SectionDef: Klient
+            // StrengthDef: Hart
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Diagnosegruppen, Remark: Keine doppelten, gleichen Einträge
+            #endregion
+
             RuleFor(x => x)
                 .Custom((y, ctx) =>
                 {

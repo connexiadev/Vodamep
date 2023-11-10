@@ -9,6 +9,16 @@ namespace Vodamep.Agp.Validation
     {
         public ActivityMinutesValidator(string propertyName, string client)
         {
+            #region Documentation
+            // AreaDef: AGP
+            // OrderDef: 03
+            // SectionDef: Klienten-Leistung
+            // StrengthDef: Hart
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Leistungszeit, Remark: > 0, in 5-Minuten-Schritten
+            #endregion
+
             this.RuleFor(x => x.Minutes)
                 .GreaterThan(0)
                 .WithMessage(x => Validationmessages.ReportBaseMinutesMustBeGreater0(propertyName, client));

@@ -10,6 +10,16 @@ namespace Vodamep.Mkkp.Validation
     {
         public DiagnosisGroupOnlyOnePalliativCareValidator()
         {
+            #region Documentation
+            // AreaDef: MKKP
+            // OrderDef: 03
+            // SectionDef: Klient
+            // StrengthDef: Hart
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Diagnosegruppen, Remark: Nur eine Palliativ Diagnose Gruppe pro Klient, Group: Inhaltlich
+            #endregion
+
             RuleFor(x => x)
                 .Custom((y, ctx) =>
                 {

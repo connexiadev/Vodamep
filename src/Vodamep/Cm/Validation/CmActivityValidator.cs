@@ -20,7 +20,7 @@ namespace Vodamep.Cm.Validation
             // Detail: Leistungszeit
 
             // CheckDef: Erlaubte Werte
-            // Detail: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Agp/ActivityType.csv
+            // Detail: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Cm/ActivityType.csv
             // Detail: Datum, Remark: Innerhalb des Meldungs-Zeitraums
             // Detail: Leistungszeit, Remark: > 0, < 10000
             #endregion

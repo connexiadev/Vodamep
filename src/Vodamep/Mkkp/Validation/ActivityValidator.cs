@@ -13,6 +13,27 @@ namespace Vodamep.Mkkp.Validation
     {
         public ActivityValidator(MkkpReport report, DateTime from, DateTime to)
         {
+            #region Documentation
+            // AreaDef: MKKP
+            // OrderDef: 03
+            // SectionDef: Leistung
+            // StrengthDef: Hart
+
+            // CheckDef: Muss Feld
+            // Detail: Klient
+            // Detail: Mitarbeiter
+            // Detail: Einsatzort
+            // Detail: Leistungstyp
+            // Detail: Datum
+            // Detail: Leistungszeit
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Leistungstyp, Remark: Leistungstypen-Liste, Url: src/Vodamep/Datasets/Mkkp/ActivityType.csv
+            // Detail: Einsatzort, Remark: Einsatzort-Liste, Url: src/Vodamep/Datasets/Mkkp/PlaceOfAction.csv
+            // Detail: Datum, Remark: Innerhalb des Meldungs-Zeitraums
+            #endregion
+
+
             var displayNameResolver = new MkkpDisplayNameResolver();
 
             this.RuleFor(x => x.PersonId).NotEmpty()

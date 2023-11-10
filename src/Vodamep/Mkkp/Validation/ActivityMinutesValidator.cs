@@ -9,6 +9,16 @@ namespace Vodamep.Mkkp.Validation
     {
         public ActivityMinutesValidator(string propertyName, string client)
         {
+            #region Documentation
+            // AreaDef:  MKKP
+            // OrderDef: 03
+            // SectionDef: Leistung
+            // StrengthDef: Hart
+
+            // CheckDef: Erlaubte Werte, Group: Inhaltlich
+            // Detail: Leistungszeit, Remark: > 0, in 5-Minuten-Schritten
+            #endregion
+
             this.RuleFor(x => x.Minutes)
                 .GreaterThan(0)
                 .WithMessage(x => Validationmessages.ReportBaseMinutesMustBeGreater0(propertyName, client));

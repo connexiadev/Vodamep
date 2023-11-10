@@ -22,6 +22,22 @@ namespace Vodamep.ValidationBase
             // Detail: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
             // Detail: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
 
+
+            // AreaDef: MKKP
+            // OrderDef: 01
+            // SectionDef: Klient
+            // StrengthDef: Hart
+
+            // CheckDef: Muss Feld
+            // Detail: Nachname
+            // Detail: Vorname
+
+            // CheckDef: Erlaubte Werte
+            // Detail: Nachname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+            // Detail: Vorname, Remark: Buchstaben, Bindestrich, Leerzeichen, Punkt
+
+
+
             // AreaDef: CM
             // OrderDef: 01
             // SectionDef: Person

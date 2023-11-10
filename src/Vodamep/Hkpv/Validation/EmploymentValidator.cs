@@ -26,7 +26,7 @@ namespace Vodamep.Hkpv.Validation
             // CheckDef: Erlaubte Werte
             // Detail: Start, Remark: Innerhalb des Meldungs-Zeitraums
             // Detail: Ende, Remark: Innerhalb des Meldungs-Zeitraums
-            // Detail: Stunden, Remark: Max. 100 pro Woche
+            // Detail: Stunden, Remark: Max. 100 pro Woche, Group: Inhaltlich
             #endregion
 
 
