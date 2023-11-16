@@ -26,12 +26,12 @@ namespace Vodamep.Hkpv.Validation
                     if (!list?.Any() ?? false)
                         return;
 
-                    var a = ctx.ParentContext.InstanceToValidate;
+                    var a = ctx.InstanceToValidate;
 
                     var l = list;
 
 
-                    var activtiy = ctx.ParentContext.InstanceToValidate as Activity;
+                    var activtiy = ctx.InstanceToValidate as Activity;
 
                     string person = string.Empty;
                     string staff = string.Empty;

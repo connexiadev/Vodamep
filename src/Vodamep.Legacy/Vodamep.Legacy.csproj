@@ -5,7 +5,7 @@
 		<Product>Vodamep.Legacy</Product>
 		<OutputType>Exe</OutputType>
 		<AssemblyName>dml</AssemblyName>
-		<TargetFramework>net472</TargetFramework>
+		<TargetFramework>net481</TargetFramework>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -13,7 +13,7 @@
 		  <PrivateAssets>all</PrivateAssets>
 		  <!--<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>-->
 		</PackageReference>
-		<PackageReference Include="Dapper" Version="2.0.30" />
+		<PackageReference Include="Dapper" Version="2.1.11" />
 		<PackageReference Include="PowerArgs" Version="3.6.0" />
 	</ItemGroup>
 

@@ -37,7 +37,7 @@ namespace Vodamep.Specs.Hkpv.StepDefinitions
             context.GetPropertiesByType = this.GetPropertiesByType;
             
             var loc = new DisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
 
             var date = DateTime.Today.AddMonths(-1);
             var r = HkpvDataGenerator.Instance.CreateHkpvReport("", date.Year, date.Month, 1, 1, false);

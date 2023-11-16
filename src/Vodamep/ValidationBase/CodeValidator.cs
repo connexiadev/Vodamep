@@ -1,26 +1,24 @@
-﻿using FluentValidation.Validators;
+﻿using FluentValidation;
+using FluentValidation.Validators;
 using Vodamep.Data;
 
 namespace Vodamep.ValidationBase
 {
-    internal class CodeValidator<T> : PropertyValidator
-        where T: CodeProviderBase
+    internal class CodeValidator<T,TProperty, TCode> : PropertyValidator<T, TProperty>
+        where TCode : CodeProviderBase
     {
-        public CodeValidator()
-            : base(Validationmessages.InvalidCode)
+
+        public override string Name => nameof(CodeValidator<T, TProperty, TCode>);
+
+        protected override string GetDefaultMessageTemplate(string errorCode) => Validationmessages.InvalidCode;
+
+        public override bool IsValid(ValidationContext<T> context, TProperty value)
         {
-
-        }
-
-        protected override bool IsValid(PropertyValidatorContext context)
-        {
-            string test = typeof(T).Name;
-
-            var code = context.PropertyValue as string;
+            var code = value as string;
 
             if (string.IsNullOrEmpty(code)) return true;
 
-            var provider = CodeProviderBase.GetInstance<T>();
+            var provider = CodeProviderBase.GetInstance<TCode>();
 
             bool isValid = provider.IsValid(code);
 

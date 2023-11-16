@@ -7,8 +7,6 @@ using Microsoft.Extensions.Logging;
 using System;
 using Connexia.Service.Client;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
-using NLog.Extensions.Logging;
-using NLog.Web;
 using Vodamep.Api.Authentication;
 using Vodamep.Api.CmdQry;
 using Vodamep.Api.Engines.FileSystem;

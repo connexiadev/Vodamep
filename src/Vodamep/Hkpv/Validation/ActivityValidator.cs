@@ -1,7 +1,6 @@
 ﻿using FluentValidation;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using Google.Protobuf.WellKnownTypes;
 using Vodamep.Hkpv.Model;
 using Vodamep.ValidationBase;
 
@@ -29,7 +28,7 @@ namespace Vodamep.Hkpv.Validation
             #endregion
 
             this.RuleFor(x => x.Date).NotEmpty();
-            this.RuleFor(x => x.Date).SetValidator(new TimestampWithOutTimeValidator()).Unless(x => x.Date == null);
+            this.RuleFor(x => x.Date).SetValidator(new TimestampWithOutTimeValidator<Activity, Timestamp>()).Unless(x => x.Date == null);
 
             if (from != DateTime.MinValue)
             {

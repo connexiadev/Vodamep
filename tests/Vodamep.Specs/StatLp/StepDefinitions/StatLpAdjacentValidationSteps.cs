@@ -33,7 +33,7 @@ namespace Vodamep.Specs.StatLp.StepDefinitions
             context.Validate = () => context.Report.Validate(context.PrecedingReport);
 
             var loc = new DisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
 
             var r1 = StatLpDataGenerator.Instance.CreateStatLpReport("0001", 2020, 1);
             r1.Admissions[0].Gender = Gender.FemaleGe;

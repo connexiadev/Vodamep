@@ -1,9 +1,6 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
-using FluentValidation.Validators;
-using System;
 using System.Linq;
-using System.Threading;
 using Vodamep.StatLp.Model;
 using Vodamep.ValidationBase;
 
@@ -17,7 +14,7 @@ namespace Vodamep.StatLp.Validation.Adjacent
         static StatLpAdjacentReportsAdmissionsDataValidator()
         {
             var loc = new DisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
         }
 
         public StatLpAdjacentReportsAdmissionsDataValidator()
@@ -42,7 +39,7 @@ namespace Vodamep.StatLp.Validation.Adjacent
         // Fields: Geschlecht, Check: Gleiches Geschlecht, Remark: Über mehrere Jahrespakete, Group: Inhaltlich
         #endregion
 
-        private void CheckGenders((StatLpReport Predecessor, StatLpReport Report) data, CustomContext ctx, string[] personIds)
+        private void CheckGenders((StatLpReport Predecessor, StatLpReport Report) data, ValidationContext< (StatLpReport Predecessor, StatLpReport Report)> ctx, string[] personIds)
         {
             var curValues = data.Report.Admissions
                    .Where(x => personIds.Contains(x.PersonId))

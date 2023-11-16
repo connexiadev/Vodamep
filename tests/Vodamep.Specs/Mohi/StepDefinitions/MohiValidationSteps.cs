@@ -30,7 +30,7 @@ namespace Vodamep.Specs.Mohi.StepDefinitions
             context.GetPropertiesByType = GetPropertiesByType;
             
             var loc = new DisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
 
             var date = new DateTime(2021, 05, 01);
             var r = MohiDataGenerator.Instance.CreateMohiReport("", date.Year, date.Month, 1, 1, false);

@@ -19,7 +19,7 @@ namespace Vodamep.Specs.Agp.StepDefinitions
         public AgpDiffSteps()
         {
             var loc = new AgpDisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
         }
 
         public AgpReport Report1 { get; private set; }

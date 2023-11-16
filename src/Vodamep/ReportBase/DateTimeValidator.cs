@@ -10,7 +10,7 @@ namespace Vodamep.ReportBase
         public DateTimeValidator(string propertyName, string client, string staff, DateTime from, DateTime to, Timestamp timestamp)
         {
             this.RuleFor(x => x)
-                .SetValidator(new TimestampWithOutTimeValidator(propertyName, client))
+                .SetValidator(new TimestampWithOutTimeValidator<DateTime,DateTime>(propertyName, client))
                 .Unless(x => timestamp == null);
 
             string personName = "";

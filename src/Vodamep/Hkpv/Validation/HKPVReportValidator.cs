@@ -3,6 +3,7 @@ using FluentValidation.Results;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Protobuf.WellKnownTypes;
 using Vodamep.Hkpv.Model;
 using Vodamep.ValidationBase;
 
@@ -16,7 +17,7 @@ namespace Vodamep.Hkpv.Validation
             CultureCheck.Check();
 
             var loc = new DisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
 
         }
 
@@ -26,8 +27,8 @@ namespace Vodamep.Hkpv.Validation
             this.RuleFor(x => x.Institution).SetValidator(new InstitutionValidator());
             this.RuleFor(x => x.From).NotEmpty();
             this.RuleFor(x => x.To).NotEmpty();
-            this.RuleFor(x => x.From).SetValidator(new TimestampWithOutTimeValidator());
-            this.RuleFor(x => x.To).SetValidator(new TimestampWithOutTimeValidator());
+            this.RuleFor(x => x.From).SetValidator(new TimestampWithOutTimeValidator<HkpvReport, Timestamp>());
+            this.RuleFor(x => x.To).SetValidator(new TimestampWithOutTimeValidator<HkpvReport, Timestamp>());
             this.RuleFor(x => x.ToD).LessThanOrEqualTo(x => DateTime.Today);
             this.RuleFor(x => x.ToD).GreaterThan(x => x.FromD).Unless(x => x.From == null || x.To == null);
 
@@ -57,7 +58,7 @@ namespace Vodamep.Hkpv.Validation
             this.RuleForEach(report => report.Activities).SetValidator(r => new ActivityValidator23Without417(r.Persons, r.Staffs)).Unless(x => x.ToD < new DateTime(2019, 01, 01));
 
 
-            this.RuleForEach(report => report.Staffs).SetValidator(r => new StaffValidator(r.FromD, r.ToD));
+            this.RuleForEach(report => report.Staffs).SetValidator(r => new StaffValidator(r, r.FromD, r.ToD));
 
             this.Include(new ActivityMedicalByQualificationTraineeValidator());
 

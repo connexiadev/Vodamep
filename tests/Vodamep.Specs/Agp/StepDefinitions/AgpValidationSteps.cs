@@ -32,7 +32,7 @@ namespace Vodamep.Specs.Agp.StepDefinitions
             context.GetPropertiesByType = this.GetPropertiesByType;
             
             var loc = new AgpDisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
 
             var date = new DateTime(2021, 05, 01);
             var r = AgpDataGenerator.Instance.CreateAgpReport("", date.Year, date.Month, 1, 1, false, false);

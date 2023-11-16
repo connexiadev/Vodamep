@@ -34,7 +34,7 @@ namespace Vodamep.Specs.StatLp.StepDefinitions
             context.GetPropertiesByType = GetPropertiesByType;
 
             var loc = new DisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
 
             var r = StatLpDataGenerator.Instance.CreateStatLpReport("0001", 2021, 1);
 

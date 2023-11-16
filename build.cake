@@ -161,7 +161,6 @@ Task("PublishApi")
 		var files = new [] {						
 			publishDir + "/dms/web.config",
 			publishDir + "/dms/appsettings.json",
-			publishDir + "/dms/nlog.config",
 		};
 
 		CopyFiles(files, publishDir + "/dms/dms_warp");

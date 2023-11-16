@@ -38,7 +38,7 @@ namespace Vodamep.Specs.StatLp.StepDefinitions
             context.Validate = () =>  this.Report.Validate((StatLpReport)context.PrecedingReport);
 
             var loc = new DisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
 
             var r1 = StatLpDataGenerator.Instance.CreateStatLpReport("0001", 2021, 1);
 

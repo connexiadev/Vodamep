@@ -1,5 +1,6 @@
 ﻿using System;
 using FluentValidation;
+using Google.Protobuf.WellKnownTypes;
 using Vodamep.ReportBase;
 
 namespace Vodamep.ValidationBase
@@ -11,8 +12,8 @@ namespace Vodamep.ValidationBase
             this.RuleFor(x => x.From).NotEmpty();
             this.RuleFor(x => x.To).NotEmpty();
 
-            this.RuleFor(x => x.From).SetValidator(new TimestampWithOutTimeValidator());
-            this.RuleFor(x => x.To).SetValidator(new TimestampWithOutTimeValidator());
+            this.RuleFor(x => x.From).SetValidator(new TimestampWithOutTimeValidator<IReport, Timestamp>());
+            this.RuleFor(x => x.To).SetValidator(new TimestampWithOutTimeValidator<IReport, Timestamp>());
 
             this.RuleFor(x => new Tuple<DateTime, DateTime>(x.FromD, x.ToD))
                 .Must(x => x.Item2 == x.Item1.LastDateInMonth())

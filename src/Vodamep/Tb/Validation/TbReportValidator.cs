@@ -18,7 +18,7 @@ namespace Vodamep.Tb.Validation
             CultureCheck.Check();
 
             displayNameResolver = new DisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => displayNameResolver.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => displayNameResolver.GetDisplayName(memberInfo?.Name);
         }
 
 

@@ -3,6 +3,7 @@ using FluentValidation.Results;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using Google.Protobuf.WellKnownTypes;
 using Vodamep.StatLp.Model;
 using Vodamep.ValidationBase;
 
@@ -15,7 +16,7 @@ namespace Vodamep.StatLp.Validation
             CultureCheck.Check();
 
             var loc = new DisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
         }
 
 
@@ -26,8 +27,8 @@ namespace Vodamep.StatLp.Validation
             this.RuleFor(x => x.Institution).SetValidator(new InstitutionValidator());
             this.RuleFor(x => x.From).NotEmpty();
             this.RuleFor(x => x.To).NotEmpty();
-            this.RuleFor(x => x.From).SetValidator(new TimestampWithOutTimeValidator());
-            this.RuleFor(x => x.To).SetValidator(new TimestampWithOutTimeValidator());
+            this.RuleFor(x => x.From).SetValidator(new TimestampWithOutTimeValidator<StatLpReport, Timestamp>());
+            this.RuleFor(x => x.To).SetValidator(new TimestampWithOutTimeValidator<StatLpReport, Timestamp>());
             this.RuleFor(x => x.ToD).LessThanOrEqualTo(x => DateTime.Today);
             this.RuleFor(x => x.ToD).GreaterThan(x => x.FromD).Unless(x => x.From == null || x.To == null);
 

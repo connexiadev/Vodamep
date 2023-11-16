@@ -1,6 +1,5 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
-using FluentValidation.Validators;
 using System;
 using System.Linq;
 using Vodamep.StatLp.Model;
@@ -15,7 +14,7 @@ namespace Vodamep.StatLp.Validation.Adjacent
         static StatLpAdjacentReportsStaysValidator()
         {
             var loc = new DisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
         }
 
         public StatLpAdjacentReportsStaysValidator()
@@ -32,7 +31,7 @@ namespace Vodamep.StatLp.Validation.Adjacent
         // Fields: Von/Bis/Aufnahmeart, Check: Aufenthalts-Zusammenhang, Remark: Gleiche Personen, mehrere Jahrespakete, Group: Inhaltlich
         #endregion
 
-        private void CheckStays((StatLpReport Predecessor, StatLpReport Report) data, CustomContext ctx)
+        private void CheckStays((StatLpReport Predecessor, StatLpReport Report) data, ValidationContext<(StatLpReport Predecessor, StatLpReport Report)> ctx)
         {
             // Personen mit Aufenthalten, die auch die nachfolgende Meldung betreffen
             var p1 = data.Predecessor.Stays.Where(x => x.To == null || x.ToD > data.Predecessor.ToD).Select(x => x.PersonId);
@@ -54,7 +53,7 @@ namespace Vodamep.StatLp.Validation.Adjacent
             }
         }
 
-        private void CheckStays((StatLpReport Predecessor, StatLpReport Report) data, CustomContext ctx, string personId)
+        private void CheckStays((StatLpReport Predecessor, StatLpReport Report) data, ValidationContext<(StatLpReport Predecessor, StatLpReport Report)> ctx, string personId)
         {
             // die relevanten Einträge der Vorgängermeldung
             var predStays = data.Predecessor.Stays.Where(x => x.PersonId == personId).ToArray();
@@ -84,7 +83,7 @@ namespace Vodamep.StatLp.Validation.Adjacent
 
         }
 
-        private void CheckStays(Stay[] predStays, Stay[] stays, CustomContext ctx, Func<string> getNameOfPerson)
+        private void CheckStays(Stay[] predStays, Stay[] stays, ValidationContext<(StatLpReport Predecessor, StatLpReport Report)> ctx, Func<string> getNameOfPerson)
         {
             // verglichen werden die beiden GroupedStays 
             GroupedStay groupdPred;

@@ -31,7 +31,7 @@ namespace Vodamep.Specs.Tb.StepDefinitions
             context.GetPropertiesByType = GetPropertiesByType;
 
             var loc = new DisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
 
             var date = DateTime.Today.AddMonths(-1);
             var r = TbDataGenerator.Instance.CreateTbReport("", date.Year, date.Month, 1, 1, false);

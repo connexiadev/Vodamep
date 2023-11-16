@@ -1,6 +1,7 @@
 ﻿using FluentValidation;
 using System;
 using System.Linq;
+using Google.Protobuf.WellKnownTypes;
 using Vodamep.StatLp.Model;
 using Vodamep.ValidationBase;
 
@@ -14,8 +15,8 @@ namespace Vodamep.StatLp.Validation
         {
             this.RuleFor(x => x.From).NotEmpty();
 
-            this.RuleFor(x => x.From).SetValidator(new TimestampWithOutTimeValidator());
-            this.RuleFor(x => x.To).SetValidator(new TimestampWithOutTimeValidator());
+            this.RuleFor(x => x.From).SetValidator(new TimestampWithOutTimeValidator<Stay, Timestamp>());
+            this.RuleFor(x => x.To).SetValidator(new TimestampWithOutTimeValidator<Stay, Timestamp>());
 
             this.RuleFor(x => x.To.AsDate()).GreaterThanOrEqualTo(x => x.From.AsDate())
                 .Unless(x => x.From == null || x.To == null).WithMessage(Validationmessages.FromMustBeBeforeTo);

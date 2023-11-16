@@ -1,6 +1,5 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
-using FluentValidation.Validators;
 using System;
 using System.Linq;
 using Vodamep.StatLp.Model;
@@ -125,7 +124,7 @@ namespace Vodamep.StatLp.Validation
         // Fields: Hauptmerkmale, Remark: Meldung der 3 Hauptmerkmale bei Aufnahme, Group: Inhaltlich
         #endregion
 
-        private void AttributeValidation(CustomContext ctx, StatLpReport report, GroupedStay s)
+        private void AttributeValidation(ValidationContext<StatLpReport> ctx, StatLpReport report, GroupedStay s)
         {
             var attributes = report.Attributes
                 .Where(x => x.PersonId == s.Stays[0].PersonId)
@@ -165,7 +164,7 @@ namespace Vodamep.StatLp.Validation
         // Fields: Aufenthaltsart, Remark: Daueraufnahme auf Übergangspflege nicht erlaubt, Group: Inhaltlich
         #endregion
 
-        private void AdmissionTypeChangeValidation(CustomContext ctx, StatLpReport report, GroupedStay s, AdmissionType from, AdmissionType to)
+        private void AdmissionTypeChangeValidation(ValidationContext<StatLpReport> ctx, StatLpReport report, GroupedStay s, AdmissionType from, AdmissionType to)
         {
             for (var i = 1; i < s.Stays.Length; i++)
             {
@@ -191,7 +190,7 @@ namespace Vodamep.StatLp.Validation
         #endregion
 
 
-        private void StayLengthValidation(CustomContext ctx, StatLpReport report, GroupedStay s, AdmissionType admissionType, int days)
+        private void StayLengthValidation(ValidationContext<StatLpReport> ctx, StatLpReport report, GroupedStay s, AdmissionType admissionType, int days)
         {
             // Länge Urlaubsbetreuung
             var holidayToLong = s.Stays.Where(x => x.Type == admissionType)
@@ -209,6 +208,7 @@ namespace Vodamep.StatLp.Validation
         }
 
 
+
         #region Documentation
         // AreaDef: STAT
         // OrderDef: 04
@@ -219,7 +219,7 @@ namespace Vodamep.StatLp.Validation
         // Fields: Aufnahmedaten, Remark: Eine Meldung der Aufnahmedaten bei Aufenthaltsstart, Group: Inhaltlich
         #endregion
 
-        private void AdmissionValidation(CustomContext ctx, StatLpReport report, Person person, GroupedStay s)
+        private void AdmissionValidation(ValidationContext<StatLpReport> ctx, StatLpReport report, Person person, GroupedStay s)
         {
             var admission = report.Admissions.Where(x => x.PersonId == person.Id && x.AdmissionDateD == s.From).ToArray();
             var hasMissingAdmission = !admission.Any();
@@ -251,7 +251,6 @@ namespace Vodamep.StatLp.Validation
             }
         }
 
-
         #region Documentation
         // AreaDef: STAT
         // OrderDef: 04
@@ -262,7 +261,7 @@ namespace Vodamep.StatLp.Validation
         // Fields: Abgangsdaten, Remark: Eine Meldung der Abgangsdaten bei Aufenthaltsende, Group: Inhaltlich
         #endregion
 
-        private void LeavingValidation(CustomContext ctx, StatLpReport report, Person person, GroupedStay s)
+        private void LeavingValidation(ValidationContext<StatLpReport> ctx, StatLpReport report, Person person, GroupedStay s)
         {
             if (s.To.HasValue && s.To < DateTime.Today)
             {

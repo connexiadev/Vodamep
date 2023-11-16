@@ -17,7 +17,7 @@ namespace Vodamep.ValidationBase
                     {
                         var item = list.Where(x => x.Id == id.Key).First();
                         var index = list.IndexOf(item);
-                        ctx.AddFailure(new ValidationFailure($"{nameof(ctx.PropertyName)}[{index}]", Validationmessages.IdIsNotUnique));
+                        ctx.AddFailure(new ValidationFailure($"{nameof(ctx.PropertyPath)}[{index}]", Validationmessages.IdIsNotUnique));
                     }
                 });
         }

@@ -33,7 +33,7 @@ namespace Vodamep.Specs.Mkkp.StepDefinitions
             context.GetPropertiesByType = GetPropertiesByType;
             
             var loc = new MkkpDisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
 
             var date = new DateTime(2021, 05, 01);
             var r = MkkpDataGenerator.Instance.CreateMkkpReport("", date.Year, date.Month, 1, 1, false, false);

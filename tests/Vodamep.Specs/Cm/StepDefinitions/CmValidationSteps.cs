@@ -31,7 +31,7 @@ namespace Vodamep.Specs.Cm.StepDefinitions
             context.GetPropertiesByType = GetPropertiesByType;
             
             var loc = new DisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
 
             var r = CmDataGenerator.Instance.CreateCmReport("", 2021, 2, 1, 1, false);
 

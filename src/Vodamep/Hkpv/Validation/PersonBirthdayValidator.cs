@@ -1,5 +1,6 @@
 ﻿using FluentValidation;
 using System;
+using Google.Protobuf.WellKnownTypes;
 using Vodamep.Hkpv.Model;
 using Vodamep.ValidationBase;
 
@@ -28,12 +29,13 @@ namespace Vodamep.Hkpv.Validation
 
 
             this.CascadeMode = CascadeMode.StopOnFirstFailure;
+            this.RuleLevelCascadeMode = CascadeMode.Stop;
 
             RuleFor(x => x.Birthday)
                 .NotEmpty();
 
             RuleFor(x => x.Birthday)
-                .SetValidator(new TimestampWithOutTimeValidator());
+                .SetValidator(new TimestampWithOutTimeValidator<Person,Timestamp>());
 
             RuleFor(x => x.BirthdayD)
                 .LessThan(DateTime.Today)

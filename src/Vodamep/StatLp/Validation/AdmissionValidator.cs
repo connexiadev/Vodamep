@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
+using Google.Protobuf.WellKnownTypes;
 using Vodamep.Data;
 using Vodamep.StatLp.Model;
 using Vodamep.ValidationBase;
@@ -74,7 +75,7 @@ namespace Vodamep.StatLp.Validation
                 .WithName(x => DisplayNameResolver.GetDisplayName(nameof(x.Nationality)))
                 .WithMessage(x => Validationmessages.ReportBaseInvalidValue(this.GetPersonName(x.PersonId, report)));
 
-            this.RuleFor(x => x.AdmissionDate).SetValidator(new TimestampWithOutTimeValidator());
+            this.RuleFor(x => x.AdmissionDate).SetValidator(new TimestampWithOutTimeValidator<Admission, Timestamp>());
 
             this.RuleFor(x => x.HousingTypeBeforeAdmission).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(DisplayNameResolver.GetDisplayName(nameof(Person)), this.GetPersonName(x.PersonId, report)));
             this.RuleFor(x => x.MainAttendanceRelation).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(DisplayNameResolver.GetDisplayName(nameof(Person)), this.GetPersonName(x.PersonId, report)));

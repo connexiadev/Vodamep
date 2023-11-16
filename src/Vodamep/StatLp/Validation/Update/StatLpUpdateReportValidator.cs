@@ -14,7 +14,7 @@ namespace Vodamep.StatLp.Validation.Update
         static StatLpUpdateReportValidator()
         {
             var loc = new DisplayNameResolver();
-            ValidatorOptions.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
+            ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
         }
 
         #region Documentation

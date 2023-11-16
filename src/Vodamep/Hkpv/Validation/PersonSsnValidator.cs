@@ -18,7 +18,9 @@ namespace Vodamep.Hkpv.Validation
             // Fields: SVNR, Remark: Gültige SVNR, Prüfziffer, Geburtsdatum
 
             #endregion
+            
             this.CascadeMode = CascadeMode.StopOnFirstFailure;
+            this.RuleLevelCascadeMode = CascadeMode.Stop;
 
             RuleFor(x => x.Ssn)
                 .NotEmpty();
