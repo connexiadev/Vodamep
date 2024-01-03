@@ -50,7 +50,7 @@ namespace Vodamep.Hkpv.Validation
             if (to < new DateTime(2019, 01, 01))
             {
                 this.RuleFor(x => x.Qualification)
-                .SetValidator(new CodeValidator<Staff, string, QualificationCodeProvider>())
+                .SetValidator(new CodeValidator<Staff, string, QualificationCodeProvider>(report.ToD))
                 .Unless(x => string.IsNullOrEmpty(x.Qualification))
                 .WithSeverity(Severity.Warning);
             }
@@ -59,7 +59,7 @@ namespace Vodamep.Hkpv.Validation
                 this.RuleFor(x => x.Qualification).NotEmpty();
 
                 this.RuleFor(x => x.Qualification)
-                .SetValidator(new CodeValidator<Staff, string, QualificationCodeProvider>())
+                .SetValidator(new CodeValidator<Staff, string, QualificationCodeProvider>(report.ToD))
                 .Unless(x => string.IsNullOrEmpty(x.Qualification));
             }
 

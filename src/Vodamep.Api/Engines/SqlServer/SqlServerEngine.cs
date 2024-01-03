@@ -185,7 +185,7 @@ namespace Vodamep.Api.Engines.SqlServer
             catch (Exception exception)
             {
                 _logger.LogInformation(exception.Message);
-                throw exception;
+                throw;
             }
 
 
@@ -219,7 +219,7 @@ namespace Vodamep.Api.Engines.SqlServer
                 catch (Exception ex)
                 {
                     _logger.LogError(ex, ex.Message);
-                    throw ex;
+                    throw;
                 }
 
                 _logger.LogInformation("Report saved");

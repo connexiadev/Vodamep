@@ -69,7 +69,7 @@ namespace Vodamep.Agp.Validation
 
 
 
-            this.RuleFor(x => x.Insurance).SetValidator(new CodeValidDateValidator<Person, string, InsuranceCodeProvider>(report.ToD))
+            this.RuleFor(x => x.Insurance).SetValidator(new CodeValidator<Person, string, InsuranceCodeProvider>(report.ToD))
                 .Unless(x => string.IsNullOrEmpty(x.Insurance))
                 .WithMessage(x => Validationmessages.ReportBaseInvalidCode(displayNameResolver.GetDisplayName(nameof(Person)), x.GetDisplayName()));
 

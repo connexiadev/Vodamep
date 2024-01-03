@@ -59,7 +59,7 @@ namespace Vodamep.Hkpv.Validation
             //    .Unless(x => string.IsNullOrEmpty(x.Insurance))
             //    .WithMessage(x => Validationmessages.ReportBaseInvalidCode(displayNameResolver.GetDisplayName(nameof(Person)), x.GetDisplayName()));
 
-            this.RuleFor(x => x.Insurance).SetValidator(new CodeValidDateValidator<Person, string, InsuranceCodeProvider>(report.ToD))
+            this.RuleFor(x => x.Insurance).SetValidator(new CodeValidator<Person, string, InsuranceCodeProvider>(report.ToD))
                 .Unless(x => string.IsNullOrEmpty(x.Insurance))
                 .WithMessage(x => Validationmessages.ReportBaseInvalidCode(displayNameResolver.GetDisplayName(nameof(Person)), x.GetDisplayName()));
 
@@ -70,7 +70,7 @@ namespace Vodamep.Hkpv.Validation
 
 
             this.RuleFor(x => x.Nationality).NotEmpty();
-            this.RuleFor(x => x.Nationality).SetValidator(new CodeValidator<Person, string, CountryCodeProvider>());
+            this.RuleFor(x => x.Nationality).SetValidator(new CodeValidator<Person, string, CountryCodeProvider>(report.ToD));
 
             this.RuleFor(x => x.CareAllowance).NotEmpty();
 
