@@ -38,7 +38,7 @@ Szenariogrundriss: Eine Eigenschaft vom Report mit einem ungültigen Wert gesetz
 	Angenommen es ist ein 'MkkpReport'
 	Und die Eigenschaft '<Name>' von 'Person' ist auf '<Wert>' gesetzt
 	Dann enthält das Validierungsergebnis genau einen Fehler
-	Und die Fehlermeldung lautet: 'Für '<Bezeichnung>' ist '<Wert>' kein gültiger Code.'
+    Und die Fehlermeldung lautet: 'Für '<Bezeichnung>'(.*)'<Wert>' kein gültiger Code.'
 Beispiele:
 	| Name      | Bezeichnung  | Wert |
 	| insurance | Versicherung | test |

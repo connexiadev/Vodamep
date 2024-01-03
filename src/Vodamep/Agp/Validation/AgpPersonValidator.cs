@@ -9,7 +9,7 @@ namespace Vodamep.Agp.Validation
 {
     internal class AgpPersonValidator : AbstractValidator<Person>
     {
-        public AgpPersonValidator()
+        public AgpPersonValidator(AgpReport report)
         {
             #region Documentation
             // AreaDef: AGP
@@ -68,7 +68,12 @@ namespace Vodamep.Agp.Validation
                 .WithMessage(x => Validationmessages.ReportBaseInvalidValue(x.GetDisplayName()));
 
 
-            this.RuleFor(x => x.Insurance).SetValidator(new CodeValidator<Person, string, InsuranceCodeProvider>()).Unless(x => string.IsNullOrEmpty(x.Insurance)).WithMessage(x => Validationmessages.ReportBaseInvalidCode(displayNameResolver.GetDisplayName(nameof(Person)), x.GetDisplayName()));
+
+            this.RuleFor(x => x.Insurance).SetValidator(new CodeValidDateValidator<Person, string, InsuranceCodeProvider>(report.ToD))
+                .Unless(x => string.IsNullOrEmpty(x.Insurance))
+                .WithMessage(x => Validationmessages.ReportBaseInvalidCode(displayNameResolver.GetDisplayName(nameof(Person)), x.GetDisplayName()));
+
+
             this.RuleFor(x => x.Diagnoses).NotEmpty().WithMessage(x => Validationmessages.AtLeastOneDiagnosisGroup(x.GetDisplayName()));
             this.Include(new DiagnosisGroupIsUniqueValidator());
         }

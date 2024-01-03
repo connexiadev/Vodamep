@@ -68,22 +68,22 @@ namespace Vodamep.StatLp.Validation
 
             foreach (var keyValuePair in FinanceProvider.Instance.Values)
             {
-                _dict.Add(keyValuePair.Key, keyValuePair.Value);
+                _dict.Add(keyValuePair.Key, keyValuePair.Value.Description);
             }
 
             foreach (var keyValuePair in CareAllowanceProvider.Instance.Values)
             {
-                _dict.Add(keyValuePair.Key, keyValuePair.Value);
+                _dict.Add(keyValuePair.Key, keyValuePair.Value.Description);
             }
 
             foreach (var keyValuePair in CareAllowanceArgeProvider.Instance.Values)
             {
-                _dict.Add(keyValuePair.Key, keyValuePair.Value);
+                _dict.Add(keyValuePair.Key, keyValuePair.Value.Description);
             }
 
             foreach (var keyValuePair in AdmissionTypeProvider.Instance.Values)
             {
-                _dict.Add(keyValuePair.Key, keyValuePair.Value);
+                _dict.Add(keyValuePair.Key, keyValuePair.Value.Description);
             }           
 
             _dict.Add(nameof(CareAllowanceArge.L0Ar), "Stufe 1");

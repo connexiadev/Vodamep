@@ -45,7 +45,7 @@ Szenariogrundriss: Eine Eigenschaft ist mit einem ungültigen Wert gesetzt.
 	Angenommen es ist ein 'AgpReport'
 	Und die Eigenschaft '<Name>' von 'Person' ist auf '<Wert>' gesetzt
 	Dann enthält das Validierungsergebnis genau einen Fehler
-	Und die Fehlermeldung lautet: 'Für '<Bezeichnung>' von Klient 'Peter Gruber' ist 'test' kein gültiger Code.'
+    Und die Fehlermeldung lautet: 'Für '<Bezeichnung>'(.*)'<Wert>' kein gültiger Code.'
 	
 Beispiele:
 	| Name      | Bezeichnung  | Wert |

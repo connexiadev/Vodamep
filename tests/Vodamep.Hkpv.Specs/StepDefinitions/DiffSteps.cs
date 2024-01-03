@@ -19,7 +19,7 @@ namespace Vodamep.Specs.StepDefinitions
 
         public DiffSteps()
         {
-            var loc = new DisplayNameResolver();
+            var loc = new HkpvDisplayNameResolver();
             ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
         }
 

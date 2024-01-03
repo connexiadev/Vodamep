@@ -9,7 +9,7 @@ namespace Vodamep.Mkkp.Validation
 {
     internal class MkkpPersonValidator : AbstractValidator<Person>
     {
-        public MkkpPersonValidator()
+        public MkkpPersonValidator(MkkpReport report)
         {
             #region Documentation
             // AreaDef: MKKP
@@ -54,7 +54,9 @@ namespace Vodamep.Mkkp.Validation
             this.RuleFor(x => x.HospitalDoctor).Matches(r).Unless(x => string.IsNullOrEmpty(x.HospitalDoctor)).WithMessage(x => Validationmessages.ReportBasePropertyInvalidFormat(displayNameResolver.GetDisplayName(nameof(Person)), x.GetDisplayName()));
             this.RuleFor(x => x.LocalDoctor).Matches(r).Unless(x => string.IsNullOrEmpty(x.LocalDoctor)).WithMessage(x => Validationmessages.ReportBasePropertyInvalidFormat(displayNameResolver.GetDisplayName(nameof(Person)), x.GetDisplayName()));
 
-            this.RuleFor(x => x.Insurance).SetValidator(new CodeValidator<Person, string, InsuranceCodeProvider>());
+            this.RuleFor(x => x.Insurance).SetValidator(new CodeValidDateValidator<Person, string, InsuranceCodeProvider>(report.ToD))
+                .Unless(x => string.IsNullOrEmpty(x.Insurance))
+                .WithMessage(x => Validationmessages.ReportBaseInvalidCode(displayNameResolver.GetDisplayName(nameof(Person)), x.GetDisplayName()));
 
             this.RuleFor(x => x.Postcode).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(x.GetDisplayName()));
             this.RuleFor(x => x.City).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(x.GetDisplayName()));

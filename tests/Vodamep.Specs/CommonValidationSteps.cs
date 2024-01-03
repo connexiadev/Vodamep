@@ -2,6 +2,7 @@
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
 using System.Collections;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text.RegularExpressions;
 using TechTalk.SpecFlow;
@@ -143,7 +144,8 @@ namespace Vodamep.Specs
             {
             }
 
-            Assert.NotEmpty(this._context.Result.Errors.Where(x => x.Severity == Severity.Error && pattern.IsMatch(x.ErrorMessage)));
+            var result = this._context.Result.Errors.Where(x => x.Severity == Severity.Error && pattern.IsMatch(x.ErrorMessage));
+            Assert.NotEmpty(result);
         }
 
         [Then(@"enthält das escapte Validierungsergebnis den Fehler '(.*)'")]

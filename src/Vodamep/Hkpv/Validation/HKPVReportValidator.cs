@@ -16,7 +16,7 @@ namespace Vodamep.Hkpv.Validation
         {
             CultureCheck.Check();
 
-            var loc = new DisplayNameResolver();
+            var loc = new HkpvDisplayNameResolver();
             ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
 
         }
@@ -48,7 +48,7 @@ namespace Vodamep.Hkpv.Validation
                 .Unless(x => x.From == null)
                 .WithMessage(Validationmessages.FirstDateInMonth);
 
-            this.RuleForEach(report => report.Persons).SetValidator(new PersonValidator());
+            this.RuleForEach(report => report.Persons).SetValidator(r => new HkpvPersonValidator(r));
 
 
             this.RuleForEach(report => report.Activities).SetValidator(r => new ActivityValidator(r.FromD, r.ToD));

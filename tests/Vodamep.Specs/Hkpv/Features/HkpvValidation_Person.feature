@@ -16,7 +16,7 @@ Szenario: Geburtsdatum und Datum aus der Sozialversicherungsnummer sollten über
     Und die Eigenschaft 'birthday' von 'Person' ist auf '1966-01-03' gesetzt
     Und die Eigenschaft 'ssn' von 'Person' ist auf '9778010366' gesetzt
     Dann enthält das Validierungsergebnis die Warnung 'Das Geburtsdatum 03.01.1966 unterscheidet sich vom Wert in der Versicherungsnummer 01.03.66.'
-    Und es enthält keine Fehler
+    Und es enthält das Validierungsergebnis keine Fehler
 
 Szenario: Bei unbekanntem Geburtsdatum bekommt der Klient eine SSN im Monat 13, das Geburtsdatum kann beliebig gesetzt werden
     Angenommen es ist ein 'HkpvReport'
@@ -49,6 +49,13 @@ Szenario: Versicherungsnummer ist nicht eindeutig.
     Angenommen eine Versicherungsnummer ist nicht eindeutig
     Dann enthält das Validierungsergebnis den Fehler 'Mehrere Personen haben die selbe Versicherungsnummer'
 
+Szenario: Versicherung ist nicht mehr gültig.
+    Angenommen es ist ein 'HkpvReport'
+    Und eine Versicherung ist nicht mehr gültig
+    Dann enthält das Validierungsergebnis genau einen Fehler
+    Und die Fehlermeldung lautet: 'Für(.*)seit(.*)kein gültiger Code mehr.'
+
+
 Szenario: PersonId ist nicht eindeutig.
     Angenommen der Id einer Hkpv-Person ist nicht eindeutig
     Dann enthält das Validierungsergebnis den Fehler 'Der Id ist nicht eindeutig.'
@@ -74,7 +81,7 @@ Szenariogrundriss: Eine Eigenschaft vom HkpvReport mit einem ungültigen Wert ge
     Angenommen es ist ein 'HkpvReport'
     Und die Eigenschaft '<Name>' von 'Person' ist auf '<Wert>' gesetzt
     Dann enthält das Validierungsergebnis genau einen Fehler
-    Und die Fehlermeldung lautet: 'Für '<Bezeichnung>' ist '<Wert>' kein gültiger Code.'
+    Und die Fehlermeldung lautet: 'Für '<Bezeichnung>'(.*)'<Wert>' kein gültiger Code.'
 Beispiele: 
     | Name        | Bezeichnung         | Wert |
     | insurance   | Versicherung        | test |

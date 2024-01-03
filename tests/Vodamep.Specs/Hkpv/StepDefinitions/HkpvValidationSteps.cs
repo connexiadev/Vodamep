@@ -35,8 +35,8 @@ namespace Vodamep.Specs.Hkpv.StepDefinitions
         private void InitContext(ReportContext context)
         {
             context.GetPropertiesByType = this.GetPropertiesByType;
-            
-            var loc = new DisplayNameResolver();
+
+            var loc = new HkpvDisplayNameResolver();
             ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
 
             var date = DateTime.Today.AddMonths(-1);
@@ -53,7 +53,7 @@ namespace Vodamep.Specs.Hkpv.StepDefinitions
         {
             return type switch
             {
-                nameof(Person) =>  this.Report.Persons,
+                nameof(Person) => this.Report.Persons,
                 nameof(Institution) => new[] { this.Report.Institution },
                 nameof(Staff) => this.Report.Staffs,
                 nameof(Activity) => this.Report.Activities,
@@ -83,7 +83,7 @@ namespace Vodamep.Specs.Hkpv.StepDefinitions
         {
             string[] fromTos = employments.Split(',');
             Employment existingEmployment = this.Report.Staffs[0].Employments.First();
-            
+
 
             this.Report.Staffs[0].Employments.Clear();
             this.Report.Activities.Clear();
@@ -151,6 +151,16 @@ namespace Vodamep.Specs.Hkpv.StepDefinitions
             var p = this.Report.AddDummyPerson();
 
             p.Ssn = p0.Ssn;
+        }
+
+        [Given(@"eine Versicherung ist nicht mehr gültig")]
+        public void GivenInsuranceNotValidAnymore()
+        {
+            var p = this.Report.Persons[0];
+
+            InsuranceCodeProvider.Instance.Values["01"].ValidTo = new DateTime(2022, 12, 31);
+
+            p.Insurance = "01";
         }
 
         [Given(@"der Id einer Hkpv-Person ist nicht eindeutig")]

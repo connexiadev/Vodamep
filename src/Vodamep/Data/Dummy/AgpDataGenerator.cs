@@ -87,8 +87,8 @@ namespace Vodamep.Data.Dummy
             {
                 var address = _addresses[_rand.Next(_addresses.Length)].Split(';');
 
-                person.Postcode = address[6];
-                person.City = address[3];
+                person.Postcode = "6800";
+                person.City = "Feldkirch";
             }
 
             person.BirthdayD = new DateTime(1920, 01, 01).AddDays(_rand.Next(20000));

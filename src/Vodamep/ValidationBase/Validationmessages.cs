@@ -35,8 +35,10 @@ namespace Vodamep.ValidationBase
         public static string LastDateInYear => "'{PropertyName}' muss der letzte Tag des Jahres sein.";
         public static string FirstDateInMonth => "'{PropertyName}' muss der erste Tag des Monats sein.";
         public static string FirstDateInYear => "'{PropertyName}' muss der erste Tag des Jahres sein.";
+
         public static string InvalidCode => "Für '{PropertyName}' ist '{PropertyValue}' kein gültiger Code.";
-        public static string ReportBaseInvalidCode(string clientOrStaff, string client) => $"Für '{{PropertyName}}' von {clientOrStaff} '{client}' ist '{{PropertyValue}}' kein gültiger Code.";
+        public static string ReportBaseInvalidCode(string clientOrStaff, string client) => $"Für '{{PropertyName}}' von {clientOrStaff} '{client}' ist '{{PropertyValue}}'{{SinceText}}.";
+
         public static string InvalidPostCode_City => "'{PropertyValue}' ist kein gültiger Ort.";
         public static string ReportBaseInvalidPostCodeCity(string client) => $"'{{PropertyValue}}' ist kein gültiger Ort von Klient '{client}'.";
         public static string ReportBaseReferrerIsOtherRefererrerThenOtherReferrerMustBeSet(string client, string clientOrStaff) => $"Wenn der Zuweiser von {clientOrStaff} '{client}' ein Anderer Zuweiser ist, dann muss Anderer Zuweiser gesetzt sein.";

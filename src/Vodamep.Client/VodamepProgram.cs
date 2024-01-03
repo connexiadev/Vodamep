@@ -47,10 +47,6 @@ namespace Vodamep.Client
 
             switch (args.Source)
             {
-                case ListSources.Insurances:
-                    provider = InsuranceCodeProvider.Instance;
-                    break;
-
                 case ListSources.CountryCodes:
                     provider = CountryCodeProvider.Instance;
                     break;

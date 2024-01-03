@@ -48,7 +48,7 @@ namespace Vodamep.Mkkp.Validation
                 .Unless(x => x.From == null)
                 .WithMessage(Validationmessages.FirstDateInMonth);
 
-            this.RuleForEach(report => report.Persons).SetValidator(new MkkpPersonValidator());
+            this.RuleForEach(report => report.Persons).SetValidator(r => new MkkpPersonValidator(r));
             this.RuleForEach(report => report.Persons).SetValidator(new PersonNameValidator(displayNameResolver.GetDisplayName(nameof(Person)), @"^[\p{L}][-\p{L}. ]*[\p{L}.]$", -1, -1, -1, -1));
             this.RuleForEach(report => report.Persons).SetValidator(new PersonBirthdayValidator(new DateTime(1900, 01, 01), displayNameResolver.GetDisplayName(nameof(Person))));
 

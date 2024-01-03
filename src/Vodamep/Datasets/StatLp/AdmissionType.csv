@@ -1,15 +1,15 @@
 ﻿// Aufnahmearten, mit alten Aufnahmearten (zu Kompatibilitätszwecken), mit Gültigkeitsdatum bis wann
 // Header: Key,Description,ValidTo
 
-UNDEFINED_AT;;31.12.2100;
-CONTINUOUS_AT;Daueraufnahme;31.12.2100;
-HOLIDAY_AT;Urlaub von der Pflege;31.12.2100;
-TRANSITIONAL_AT;Übergangspflege;31.12.2100;
-COVID19_RESPITE_AT;COVID-19 Entlastungspflege;31.12.2100;
-GERIATRIC_REMOBILIZATION_AT;Geriatrische Remobilisation;31.12.2100;
-CARE_TRANSITION_AT;Überleitungspflege;31.12.2100;
+UNDEFINED_AT;;
+CONTINUOUS_AT;Daueraufnahme;
+HOLIDAY_AT;Urlaub von der Pflege;
+TRANSITIONAL_AT;Übergangspflege;
+COVID19_RESPITE_AT;COVID-19 Entlastungspflege;
+GERIATRIC_REMOBILIZATION_AT;Geriatrische Remobilisation;
+CARE_TRANSITION_AT;Überleitungspflege;
 TRIAL_AT;Probe;01.08.2014;
-CRISIS_INTERVENTION_AT;Krisenintervention;31.11.2019;
+CRISIS_INTERVENTION_AT;Krisenintervention;30.11.2019;
 
 
            

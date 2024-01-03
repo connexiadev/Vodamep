@@ -10,6 +10,7 @@ namespace Vodamep.Data
 {
 
 
+
     /// <summary>
     /// Werte der Code Provider auslesen
     /// </summary>
@@ -131,13 +132,13 @@ namespace Vodamep.Data
 
                 if (baseProvider.IsEnumProvider)
                 {
-                    IReadOnlyDictionary<string, string> values = baseProvider.Values;
+                    IReadOnlyDictionary<string, CodeData> values = baseProvider.Values;
 
-                    foreach (KeyValuePair<string, string> key in values)
+                    foreach (KeyValuePair<string, CodeData> key in values)
                     {
                         if (!textDictionary.ContainsKey(key.Key))
                         {
-                            textDictionary.Add(key.Key, key.Value);
+                            textDictionary.Add(key.Key, key.Value.Description);
                         }
                         else
                         {
