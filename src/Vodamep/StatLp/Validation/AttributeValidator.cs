@@ -1,6 +1,8 @@
 ﻿using FluentValidation;
+using FluentValidation.Results;
 using Google.Protobuf.WellKnownTypes;
 using System.Linq;
+using System.Reflection;
 using Vodamep.StatLp.Model;
 using Vodamep.ValidationBase;
 using Attribute = Vodamep.StatLp.Model.Attribute;
@@ -39,7 +41,31 @@ namespace Vodamep.StatLp.Validation
                 .Must(x => x.ValueCase != Attribute.ValueOneofCase.None)
                 .WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmptyWithString(report.GetPersonName(x.PersonId)));
 
-            
+
+            // Zu jedem Attribut muss es die Person geben
+            this.RuleFor(x => x)
+                .Custom((x, ctx) =>
+                {
+                    void AddFailureIfUndefined(bool hasValue, bool isUndefined)
+                    {
+                        if (hasValue && isUndefined)
+                        {
+                            ctx.AddFailure(new ValidationFailure(
+                                $"{nameof(StatLpReport.Attributes)}",
+                                Validationmessages.StatLpAdmissionAttributeEmpty(
+                                    report.GetPersonName(x.PersonId),
+                                    x.FromD.ToShortDateString(),
+                                    DisplayNameResolver.GetDisplayName(x.ValueCase.ToString()))));
+                        }
+                    }
+
+                    AddFailureIfUndefined(x.HasFinance, x.Finance == Finance.UndefinedFi);
+                    AddFailureIfUndefined(x.HasCareAllowance, x.CareAllowance == CareAllowance.UndefinedAllowance);
+                    AddFailureIfUndefined(x.HasCareAllowanceArge, x.CareAllowanceArge == CareAllowanceArge.UndefinedAr);
+                });
+
+
+
             Stay StayOfDate(string personId, Timestamp date)
             {
                 if (string.IsNullOrEmpty(personId) || date == null)
