@@ -59,6 +59,7 @@ namespace Vodamep.Data.Dummy
                     .Where(x => x != CareAllowance.UndefinedAllowance)
                     .ElementAt(_rand.Next(Enum.GetValues(typeof(CareAllowance)).Length - 1)),
                 Nationality = "AT",
+                AdmissionType = AdmissionType.DayCareAt,
                 Gender = _rand.Next(2) == 1 ? Gender.FemaleGe : Gender.MaleGe,
                 MainAttendanceRelation = MainAttendanceRelation.ChildMr,
                 MainAttendanceCloseness = ((MainAttendanceCloseness[])(Enum.GetValues(typeof(MainAttendanceCloseness))))
