@@ -27,6 +27,7 @@ namespace Vodamep.Tb.Validation
             _dict.Add(nameof(Person.FamilyName), "Familienname");
             _dict.Add(nameof(Person.Birthday), "Geburtsdatum");
             _dict.Add(nameof(Person.BirthdayD), "Geburtsdatum");
+            _dict.Add(nameof(Person.AdmissionType), "Aufnahmeart");
 
             _dict.Add(nameof(Person.CareAllowance), "Pflegegeld");
             _dict.Add(nameof(Person.Postcode), "PLZ");
