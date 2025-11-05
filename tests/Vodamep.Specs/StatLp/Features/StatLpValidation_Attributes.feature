@@ -23,9 +23,21 @@ Szenario: Von darf keine Zeit beinhalten
 # - innerhalb vom Vodamep Server
 # - innerhalb der Connexia Logik
 
-Szenario: Pflegegeld ist undefiniert
-	Angenommen es gibt am '2021-03-01' ein zusätzliches Attribut vom Typ 'care_allowance' und dem Wert 'Unspecified'
+Szenario: Ein Attribut hat keinen Typ
+	Angenommen es gibt am '2021-03-01' ein zusätzliches Attribut vom Typ 'Something' und dem Wert 'Unspecified'
 	Dann enthält das Validierungsergebnis den Fehler 'Ein Merkmal von Klient '(.*)' darf nicht leer sein'
+	
+Szenario: Pflegegeld ist undefiniert
+	Angenommen es gibt am '2021-03-01' ein zusätzliches Attribut vom Typ 'CareAllowance' und dem Wert 'Unspecified'
+	Dann enthält das Validierungsergebnis den Fehler 'Für die Person '(.*)' wurde am (.*) kein Wert bei'
+	
+Szenario: Pflegstufe Arge ist undefiniert
+	Angenommen es gibt am '2021-03-01' ein zusätzliches Attribut vom Typ 'CareAllowanceArge' und dem Wert 'Unspecified'
+	Dann enthält das Validierungsergebnis den Fehler 'Für die Person '(.*)' wurde am (.*) kein Wert bei'
+	
+Szenario: Finanzierung ist undefiniert
+	Angenommen es gibt am '2021-03-01' ein zusätzliches Attribut vom Typ 'Finance' und dem Wert 'Unspecified'
+	Dann enthält das Validierungsergebnis den Fehler 'Für die Person '(.*)' wurde am (.*) kein Wert bei'
 	
 Szenariogrundriss: Fehlende Pflichtfelder für die Aufnahme
 	Angenommen es ist ein 'StatLpReport'

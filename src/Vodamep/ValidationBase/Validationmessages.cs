@@ -112,6 +112,8 @@ namespace Vodamep.ValidationBase
         public static string StatLpAdmissionEmptyPostCode(string date) => $"Keine Angabe von Ort/Plz bei Aufnahme am {date}.";
         public static string StatLpAdmissionWrongPostCode(string date) => $"Ungültige Kombination Ort/Plz bei Aufnahme am {date}.";
 
+        public static string StatLpAdmissionAttributeEmpty(string clientName, string date, string attributeType) => $"Für die Person '{clientName}' wurde am {date} kein Wert bei '{attributeType}' gemeldet.";
+
         public static string StatLpAdmissionAttributeMissing(string clientName, string date, string attributeType) => $"Für die Person '{clientName}' wurde am {date} keine '{attributeType}' gemeldet.";
         public static string StatLpAttributeMultiple(string clientName, string date, string attributeType) => $"Beim Klient '{clientName}' wurde am {date} das Attribut '{attributeType}' mehrfach angegeben.";
 
@@ -148,11 +150,11 @@ namespace Vodamep.ValidationBase
         {
             if (minDate == maxDate)
             {
-                return $"am { minDate.ToShortDateString()}";
+                return $"am {minDate.ToShortDateString()}";
             }
             else
             {
-                return $"zwischen { minDate.ToShortDateString()} und { maxDate.ToShortDateString()}";
+                return $"zwischen {minDate.ToShortDateString()} und {maxDate.ToShortDateString()}";
             }
         }
 
