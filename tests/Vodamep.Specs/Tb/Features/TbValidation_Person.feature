@@ -31,6 +31,7 @@ Beispiele:
 	| nationality               | Staatsbürgerschaft                             |
 	| postcode                  | PLZ                                            |
 	| city                      | Ort                                            |
+	| admission_type            | Aufnahmeart                                    |
 	| care_allowance            | Pflegegeld                                     |
 	| main_attendance_relation  | Verwandtschaftsverhältnis Hauptbetreuungspers. |
 	| main_attendance_closeness | Räumliche Nähe Hauptbetreuungsperson           |

@@ -22,6 +22,7 @@ namespace Vodamep.Tb.Validation
             // Fields: Geschlecht
             // Fields: PLZ/Ort
             // Fields: Pflegestufe
+            // Fields: Aufnahmeart
             // Fields: Verwandtschaftsverhältnis
             // Fields: Räumliche Nähe
             // Fields: Staatsbürgerschaft
@@ -29,6 +30,7 @@ namespace Vodamep.Tb.Validation
             // CheckDef: Erlaubte Werte
             // Fields: Geschlecht, Remark: Geschlechter-Liste, Url: src/Vodamep/Datasets/Gender.csv
             // Fields: PLZ/Ort, Remark: Ab 2019, PLZ/Orte-Liste, Url: src/Vodamep/Datasets/PostcodeCity.csv
+            // Fields: Aufnahmearten, Remark: Aufnahmearten-Liste, Url:  src/Vodamep/Datasets/Tb/AdmissionType.csv
             // Fields: Pflegestufen, Remark: Pflegestufen-Liste, Url:  src/Vodamep/Datasets/CareAllowance.csv
             // Fields: Verwandtschaftsverhältnis, Remark: Verwandtschaftsverhältnis-Liste, Url:  src/Vodamep/Datasets/MainAttendanceRelation.csv
             // Fields: Räumliche Nähe, Remark: Räumliche-Nähe-Liste, Url:  src/Vodamep/Datasets/MainAttendanceCloseness.csv
@@ -39,6 +41,10 @@ namespace Vodamep.Tb.Validation
             this.RuleFor(x => x.CareAllowance).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(x.GetDisplayName()));
             this.RuleFor(x => x.MainAttendanceRelation).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(x.GetDisplayName()));
             this.RuleFor(x => x.MainAttendanceCloseness).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(x.GetDisplayName()));
+
+            this.RuleFor(x => x.AdmissionType).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(x.GetDisplayName()));
+
+
 
             this.RuleFor(x => x.Nationality).NotEmpty().WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(x.GetDisplayName()));
 
