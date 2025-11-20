@@ -49,7 +49,7 @@ namespace Vodamep.ValidationBase
         public static string ReportBaseMaxSumOfMinutesPerStaffMemberIs12Hours(string date, string name) => $"Die Leistungsminuten von '{name}' am '{date}' dürfen 12 Stunden nicht überschreiten.";
         public static string MaxSumOfMinutesTravelTimesIs5Hours(string staff, string date) => $"Summe Wegzeiten von Mitarbeiter {staff} am {date} darf 12 Stunden nicht überschreiten.";
         public static string OnlyOneTravelTimeEntryPerStaffMemberAndDay => "Pro Mitarbeiter ist nur ein Eintrag bei den Wegzeiten pro Tag erlaubt.";
-        public static string WithinAnActivityThereAreNoDoubledActivityTypesAllowed(string client) => $"Innerhalb einer Aktivität von Klient '{client}' dürfen keine doppelten Leistungstypen vorhanden sein.";
+        public static string WithinAnActivityThereAreNoDoubledActivityTypesAllowed(string client, string date) => $"Innerhalb einer Aktivität (Klient '{client}' am {date}) dürfen keine doppelten Leistungstypen vorhanden sein.";
         public static string WithinAnActivityTheValuesAreNotAllowedInCombination(string client, string activityType1, string activityType2) => $"Innerhalb einer Aktivität von Klient '{client}' dürfen nicht gleichzeitg die Leistungstypen '{activityType1}' und '{activityType2}' vorhanden sein.";
         public static string InvalidInstitutionNumber => "Ungültige Einrichtungsnummer.";
         public static string NoDoubledValuesAreAllowed => $"Doppelte Angaben bei '{{PropertyName}}'";
@@ -145,6 +145,17 @@ namespace Vodamep.ValidationBase
 
         public static string MkkpActivityScopeEmpty(string clientName, string date) => $"Leistungsbereich für Aktivität vom {date} '{clientName}' nicht angegeben.";
 
+
+        public static string AgpActivityEntriesMustNotMixPdsAndNonPds(string client, string date) => $"Leistungsbereiche AGP und PDS dürfen am gleichen Tag nicht gemeinsam angegeben werden (Klient '{client}' am {date}).";
+
+        public static string AgpActivityEntriesWithPdsMustHaveSingleEntry(string client, string date) => $"Eine PDS-Leistung darf nur eine Tätigkeit beinhalten (Klient '{client}' am {date}).";
+
+        public static string AgpActivityTypeObservationsAssessmentAtNotAllowedFrom2026(string client, string date) => $"Klientenbeobachtung/Assessment ab 01.01.2026 nicht mehr erlaubt (Klient '{client}' am {date}).";
+
+        public static string AgpActivityTypeObservationsAndAssessmentNotAllowedBefore2026(string client, string date) => $"Klientenbeobachtung oder Assessment (einzeln) erst ab 01.01.2026 erlaubt (Klient '{client}' am {date}).";
+        
+        public static string AgpActivityPdsSwitchWarning(string client) => $"Klient '{client}' hat einen Wechsel zwischen den Leistungsbereichen AGP/PDS.";
+        public static string AgpActivityPdsSwitchError(string client) => $"Mehrere Wechsel für Klient '{client}' zwischen den Leistungsbereichen AGP und PDS sind nicht erlaubt.";
 
         public static string GetRange(DateTime minDate, DateTime maxDate)
         {

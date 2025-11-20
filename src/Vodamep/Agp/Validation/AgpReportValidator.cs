@@ -53,6 +53,7 @@ namespace Vodamep.Agp.Validation
             this.RuleForEach(report => report.Persons).SetValidator(new PersonBirthdayValidator(new DateTime(1900, 01, 01), displayNameResolver.GetDisplayName(nameof(Person))));
 
             this.RuleForEach(report => report.Activities).SetValidator(r => new ActivityValidator(r));
+            this.RuleFor(report => report).SetValidator(r => new ActivityTypeValidator());
 
             this.RuleForEach(report => report.StaffActivities).SetValidator(r => new StaffActivityValidator(r));
 

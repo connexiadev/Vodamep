@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using FluentValidation;
 using FluentValidation.Results;
@@ -47,27 +48,10 @@ namespace Vodamep.Agp.Validation
                 .WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(displayNameResolver.GetDisplayName(nameof(x.Entries)), displayNameResolver.GetDisplayName(nameof(Activity)), report.GetClient(x.PersonId)));
             this.RuleFor(x => x.Date).NotEmpty()
                 .WithMessage(x => Validationmessages.ReportBaseValueMustNotBeEmpty(displayNameResolver.GetDisplayName(nameof(x.Date)), displayNameResolver.GetDisplayName(nameof(Activity)), report.GetClient(x.PersonId)));
-
-
             this.RuleFor(x => x.DateD)
                 .SetValidator(x => new DateTimeValidator(displayNameResolver.GetDisplayName(nameof(x.Date)),
                     report.GetClient(x.PersonId), null, report.FromD, report.ToD, x.Date));
 
-
-            this.RuleFor(x => x).Custom((x, ctx) =>
-            {
-                var entries = x.Entries;
-
-                var doubledQuery = entries.GroupBy(y => y)
-                    .Where(activityTypes => activityTypes.Count() > 1)
-                    .Select(group => group.Key);
-
-                if (doubledQuery.Any())
-                {
-                    ctx.AddFailure(new ValidationFailure(nameof(Activity.Minutes), Validationmessages.WithinAnActivityThereAreNoDoubledActivityTypesAllowed(report.GetClient(x.PersonId))));
-                }
-
-            });
 
             this.RuleFor(x => x).SetValidator(x => new ActivityMinutesValidator(displayNameResolver.GetDisplayName(nameof(Activity.Minutes)), report.GetClient(x.PersonId)));
         }

@@ -111,6 +111,51 @@ namespace Vodamep.Specs.Agp.StepDefinitions
             });
         }
 
+        [Given(@"es erfolgt ein Wechsel bei einem Klient zwischen AGP und PDS")]
+        public void Given1ChangeAgpPds()
+        {
+            var existingActivity = this.Report.Activities.First();
+
+            // PDS Aktivität
+            this.Report.Activities.Add(new Activity()
+            {
+                Id = existingActivity.Id,
+                DateD = existingActivity.DateD + TimeSpan.FromDays(1),
+                Minutes = 15,
+                PersonId = existingActivity.PersonId,
+                PlaceOfAction = PlaceOfAction.BasePlace,
+                Entries = { ActivityType.PdsSocialParticipationAt }
+            });
+        }
+
+        [Given(@"es erfolgen zwei Wechsel bei einem Klient zwischen AGP und PDS")]
+        public void Given2ChangesAgpPds()
+        {
+            var existingActivity = this.Report.Activities.First();
+
+            // PDS Aktivität
+            this.Report.Activities.Add(new Activity()
+            {
+                Id = existingActivity.Id,
+                DateD = existingActivity.DateD + TimeSpan.FromDays(1),
+                Minutes = 15,
+                PersonId = existingActivity.PersonId,
+                PlaceOfAction = PlaceOfAction.BasePlace,
+                Entries = { ActivityType.PdsSocialParticipationAt }
+            });
+
+            // AGP Aktivität
+            this.Report.Activities.Add(new Activity()
+            {
+                Id = existingActivity.Id,
+                DateD = existingActivity.DateD + TimeSpan.FromDays(2),
+                Minutes = 15,
+                PersonId = existingActivity.PersonId,
+                PlaceOfAction = PlaceOfAction.BasePlace,
+                Entries = { ActivityType.GuidanceClientAt }
+            });
+        }
+
         [Given(@"es werden zusätzliche Leistungen pro AGP-Klient an einem Tag eingetragen")]
         public void GivenAdditonalActivitiesPerClientAndDay()
         {

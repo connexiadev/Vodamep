@@ -40,7 +40,7 @@ namespace Vodamep.Agp.Validation
 
             this.RuleFor(x => x.DateD)
                 .SetValidator(x => new DateTimeValidator(displayNameResolver.GetDisplayName(nameof(x.Date)),
-                    null, null, report.FromD, report.ToD, x.Date));
+                    null, "Mitarbeiter", report.FromD, report.ToD, x.Date));
 
             this.RuleFor(x => x).SetValidator(x => new StaffActivityMinutesValidator(displayNameResolver.GetDisplayName(nameof(Activity.Minutes)), x.Id));
 
