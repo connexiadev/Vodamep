@@ -113,7 +113,7 @@ Szenario: Mehrfache Leistungstypen pro Leistung
 
 Szenario: Doppelte Leistungen innerhalb einer Aktivität
 	Angenommen die Leistungstypen 'MedicalDiet,MedicalDiet' sind für eine Mkkp-Aktivität gesetzt
-	Dann enthält das Validierungsergebnis den Fehler 'Innerhalb einer Aktivität von Klient '(.*)' dürfen keine doppelten Leistungstypen vorhanden sein.'
+	Dann enthält das Validierungsergebnis den Fehler 'dürfen keine doppelten Leistungstypen vorhanden sein.'
     
 Szenario: Leistung darf bestimmte Kombinationen nicht enhalten
 	Angenommen die Leistungstypen 'AccompanyingWithContact,AccompanyingWithoutContact' sind für eine Mkkp-Aktivität gesetzt

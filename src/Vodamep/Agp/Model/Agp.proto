@@ -67,6 +67,7 @@ message Activity {
     int32 minutes = 6;
 }
 
+
 // Beschreibung in activitytypes.csv
 enum ActivityType { 
     UNDEFINED_AT = 0;
@@ -78,6 +79,13 @@ enum ActivityType {
     CARE_DOCUMENTATION_AT = 6;
     CONTACT_PARTNER_AT = 7;
     EXECUTION_TRANSPORT_AT = 8;
+    PDS_DIAGNOSIS_UNDERSTANDING_AT = 9;
+    PDS_EMOTIONAL_WELLBEING_AT = 10;
+    PDS_SOCIAL_PARTICIPATION_AT = 11;
+    PDS_PEER_SUPPORT_AT = 12;
+    PDS_FUTURE_PLANNING_AT = 13;
+    OBSERVATIONS_AT = 14;
+    ASSESSMENT_AT = 15;
 }
 
 

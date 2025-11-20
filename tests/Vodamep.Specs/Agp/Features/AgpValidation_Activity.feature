@@ -61,6 +61,44 @@ Beispiele:
 	| 15   |
 
 
+Szenario: Eine PDS Tätigkeit in einer Aktivität
+	Angenommen die Leistungstypen 'PdsPeerSupportAt' sind für eine AGP-Aktivität gesetzt
+	Dann enthält das Validierungsergebnis keine Fehler
+	Und es enthält keine Warnungen
+
+Szenario: Vermischung AGP und PDS Tätigkeiten in einer Aktivität
+	Angenommen die Leistungstypen 'ClearingAt,PdsPeerSupportAt' sind für eine AGP-Aktivität gesetzt
+	Dann enthält das Validierungsergebnis den Fehler 'Leistungsbereiche AGP und PDS dürfen am gleichen Tag nicht gemeinsam angegeben werden(.*)'
+
+Szenario: Ein Wechsel zwischen AGP und PDS bei einem Klienten 
+	Angenommen es erfolgt ein Wechsel bei einem Klient zwischen AGP und PDS
+	Dann enthält das Validierungsergebnis die Warnung 'Wechsel zwischen den Leistungsbereichen'
+
+Szenario: Zwei Wechsel zwischen AGP und PDS bei einem Klienten 
+	Angenommen es erfolgen zwei Wechsel bei einem Klient zwischen AGP und PDS
+	Dann enthält das Validierungsergebnis den Fehler 'Leistungsbereichen AGP und PDS sind nicht erlaubt'
+
+Szenario: Mehrere PDS Tätigkeiten in einer Aktivität
+	Angenommen die Leistungstypen 'PdsFuturePlanningAt,PdsPeerSupportAt' sind für eine AGP-Aktivität gesetzt
+	Dann enthält das Validierungsergebnis den Fehler 'Eine PDS-Leistung darf nur eine Tätigkeit beinhalten(.*)'
+
+Szenario: Klientenbeobachtung/Assessment Tätigkeit ab 2026
+    Angenommen es ist ein 'AgpReport'
+    Und die Eigenschaft 'from' von 'AgpReport' ist auf '2026-01-01' gesetzt
+    Und die Eigenschaft 'to' von 'AgpReport' ist auf '2026-01-31' gesetzt
+	Und die Eigenschaft 'date' von 'Activity' ist auf '2026-01-30' gesetzt
+	Und die Eigenschaft 'date' von 'StaffActivity' ist auf '2026-01-29' gesetzt
+	Und die Leistungstypen 'ObservationsAssessmentAt' sind für eine AGP-Aktivität gesetzt
+	Dann enthält das Validierungsergebnis den Fehler 'Klientenbeobachtung/Assessment ab 01.01.2026 nicht mehr erlaubt(.*)'
+
+Szenario: Klientenbeobachtung oder Assessment Tätigkeit vor 2026
+    Angenommen es ist ein 'AgpReport'
+    Und die Eigenschaft 'from' von 'AgpReport' ist auf '2025-01-01' gesetzt
+    Und die Eigenschaft 'to' von 'AgpReport' ist auf '2025-01-31' gesetzt
+	Und die Eigenschaft 'date' von 'Activity' ist auf '2025-01-30' gesetzt
+	Und die Leistungstypen 'ObservationsAt' sind für eine AGP-Aktivität gesetzt
+	Dann enthält das Validierungsergebnis den Fehler 'Klientenbeobachtung oder Assessment (.*) erst ab 01.01.2026 erlaubt'
+
 Szenario: Mehrfache Leistungen pro Klient pro Tag
 	Angenommen es werden zusätzliche Leistungen pro AGP-Klient an einem Tag eingetragen
 	Dann enthält das Validierungsergebnis keine Fehler
@@ -73,7 +111,7 @@ Szenario: Mehrfache Leistungstypen pro Leistung
 
 Szenario: Doppelte Leistungen innerhalb einer Aktivität
 	Angenommen die Leistungstypen 'CareDocumentationAt,CareDocumentationAt' sind für eine AGP-Aktivität gesetzt
-	Dann enthält das Validierungsergebnis den Fehler 'Innerhalb einer Aktivität von Klient 'Peter Gruber' dürfen keine doppelten Leistungstypen vorhanden sein.'
+	Dann enthält das Validierungsergebnis den Fehler 'Innerhalb einer Aktivität (.*) dürfen keine doppelten Leistungstypen vorhanden sein.'
 
 Szenario: Es muss mindestens ein Leistungstyp pro Leistung vorhanden sein
 	Angenommen die Leistungstypen '' sind für eine AGP-Aktivität gesetzt

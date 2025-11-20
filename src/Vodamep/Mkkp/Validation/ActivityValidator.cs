@@ -73,7 +73,7 @@ namespace Vodamep.Mkkp.Validation
 
                 if (doubledQuery.Any())
                 {
-                    ctx.AddFailure(new ValidationFailure(nameof(Activity.Minutes), Validationmessages.WithinAnActivityThereAreNoDoubledActivityTypesAllowed(report.GetClient(x.PersonId))));
+                    ctx.AddFailure(new ValidationFailure(nameof(Activity.Minutes), Validationmessages.WithinAnActivityThereAreNoDoubledActivityTypesAllowed(report.GetClient(x.PersonId), x.DateD.ToShortDateString())));
                 }
 
                 if (entries.Any(y => y == ActivityType.AccompanyingWithContact) &&
