@@ -10,6 +10,23 @@ namespace Vodamep.Agp.Validation
 {
     internal class ActivityTypeValidator : AbstractValidator<AgpReport>
     {
+        #region Documentation
+        // AreaDef: AGP
+        // OrderDef: 04
+        // SectionDef: Klienten-Leistung
+        // StrengthDef: Fehler
+
+        // CheckDef: PDS/AGP Leistungsarten
+        // Fields: Leistungstyp, Remark: PDS-Leistungsarten erst ab 2026
+        // Fields: Leistungstyp, Remark: PDS-Leistungsarten nur für Rankweil und Vorderland erlaubt
+        // Fields: Leistungstyp, Remark: Keine Vermischung zwischen AGP und PDS bei einer Leistung
+        // Fields: Leistungstyp, Remark: AGP: Mehrere Leistungsarten erlaubt, PDS: Nur eine Leistungsart erlaubt
+        // Fields: Leistungstyp, Remark: AGP, Klientenbeobachtung/Assessment ab 2026 nicht mehr erlaubt
+        // Fields: Leistungstyp, Remark: AGP, Klientenbeobachtung oder Assessment erst ab 2026 erlaubt
+        // Fields: Leistungstyp, Remark: Keine gleichen Leistungstypen innerhalb einer Leistung
+        // Fields: Leistungstyp, Remark: Nur ein Wechsel zwischen AGP und PDS im Monat erlaubt
+        #endregion
+
         public ActivityTypeValidator()
         {
             var displayNameResolver = new AgpDisplayNameResolver();
