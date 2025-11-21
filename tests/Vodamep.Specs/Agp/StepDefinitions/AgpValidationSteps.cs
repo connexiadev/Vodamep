@@ -35,7 +35,7 @@ namespace Vodamep.Specs.Agp.StepDefinitions
             ValidatorOptions.Global.DisplayNameResolver = (type, memberInfo, expression) => loc.GetDisplayName(memberInfo?.Name);
 
             var date = new DateTime(2021, 05, 01);
-            var r = AgpDataGenerator.Instance.CreateAgpReport("", date.Year, date.Month, 1, 1, false, false);
+            var r = AgpDataGenerator.Instance.CreateAgpReport("0004", date.Year, date.Month, 1, 1, false, false);
             AddDummyActivity(r, r.Persons[0].Id);
             AddDummyStaffActivity(r);
 
