@@ -156,6 +156,7 @@ namespace Vodamep.ValidationBase
         
         public static string AgpActivityPdsSwitchWarning(string client) => $"Klient '{client}' hat einen Wechsel zwischen den Leistungsbereichen AGP/PDS.";
         public static string AgpActivityPdsSwitchError(string client) => $"Mehrere Wechsel für Klient '{client}' zwischen den Leistungsbereichen AGP und PDS sind nicht erlaubt.";
+        public static string AgpActivityPdsNotAllowedForInstitution(string client, string date) => $"PDS-Leistungsarten sind für diese Einrichtung nicht erlaubt (Klient '{client}' am {date}).";
 
         public static string GetRange(DateTime minDate, DateTime maxDate)
         {

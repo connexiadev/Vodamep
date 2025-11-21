@@ -23,6 +23,27 @@ namespace Vodamep.Agp.Validation
 
                 DateTime pdsStart = new DateTime(2026, 1, 1);
 
+                // Alle activity.Entries in einer Liste sammeln, die mit Pds... beginnen
+                var allPdsEntries = report.Activities
+                    .Where(a => a != null && a.Entries != null && a.Entries.Any())
+                    .Where(a => a.Entries.Any(IsPdsActivityType))
+                    .ToList();
+
+                // Prüfung: PDS-Leistungsarten nur für Institutionen 0004 oder 0005 erlaubt
+                var allowedInstitutionIds = new[] { "0004", "0005" };
+                var institutionId = report.Institution?.Id;
+                var isInstitutionAllowed = !string.IsNullOrEmpty(institutionId) && allowedInstitutionIds.Contains(institutionId);
+
+                if (!isInstitutionAllowed && allPdsEntries.Any())
+                {
+                    foreach (var activity in allPdsEntries)
+                    {
+                        var clientName = report.GetClient(activity.PersonId);
+                        var date = activity.DateD;
+                        ctx.AddFailure(new ValidationFailure(nameof(Activity.Entries), Validationmessages.AgpActivityPdsNotAllowedForInstitution(clientName, date.ToShortDateString())));
+                    }
+                }
+
                 // Loop durch alle Activities - Prüfungen für einzelne Activities
                 bool hasError = false;
                 foreach (var activity in report.Activities)

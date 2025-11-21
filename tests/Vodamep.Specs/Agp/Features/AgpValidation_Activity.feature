@@ -60,6 +60,11 @@ Beispiele:
 	| 10   |
 	| 15   |
 
+Szenario: Eine PDS Tätigkeit in einer nicht erlaubten Einrichtung 
+	Angenommen es ist ein 'AgpReport'
+    Und die Eigenschaft 'id' von 'Institution' ist auf '0001' gesetzt
+	Und die Leistungstypen 'PdsPeerSupportAt' sind für eine AGP-Aktivität gesetzt
+	Dann enthält das Validierungsergebnis den Fehler 'PDS-Leistungsarten sind für diese Einrichtung nicht erlaubt(.*)'
 
 Szenario: Eine PDS Tätigkeit in einer Aktivität
 	Angenommen die Leistungstypen 'PdsPeerSupportAt' sind für eine AGP-Aktivität gesetzt
